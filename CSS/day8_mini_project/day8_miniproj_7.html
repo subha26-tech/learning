@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Contact Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .contact-section {
+            height: 100vh;
+            background:linear-gradient(100deg,#764ba2,#667eea,#764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-container {
+            width: 80%;
+            max-width: 900px;
+            background: whitesmoke;
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .contact-form,
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        p.instructions {
+            font-size: 1em;
+            margin-bottom: 20px;
+            color: #666666;
+        }
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        input,
+        textarea {
+            width: 100%; 
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <p class="instructions">Please fill out the form below and we'll get back to you soon.</p>
+                <form>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Write your message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>📍 Address:</strong> 123 1st Street, City, Country</p>
+                <p><strong>📞 Phone:</strong> +91 12345 67890</p>
+                <p><strong>📧 Email:</strong> info@example.com</p>
+                <p><strong>🕒 Working Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

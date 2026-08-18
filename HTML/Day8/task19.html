@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Game</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f2f2f2;
+        text-align:center;
+    }
+
+    h1{
+        color:#333;
+    }
+
+    #stats{
+        font-size:20px;
+        margin:20px;
+        font-weight:bold;
+    }
+
+    .game-board{
+        width:440px;
+        margin:auto;
+        display:grid;
+        grid-template-columns:repeat(4,100px);
+        gap:10px;
+    }
+
+    .card{
+        width:100px;
+        height:100px;
+        background:#3498db;
+        color:white;
+        font-size:40px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        cursor:pointer;
+        border-radius:8px;
+        user-select:none;
+    }
+
+    .flipped{
+        background:white;
+        color:black;
+    }
+
+    button{
+        margin-top:20px;
+        padding:10px 20px;
+        font-size:16px;
+        cursor:pointer;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>Memory Card Game</h1>
+
+<div id="stats">
+Wins: <span id="wins">0</span> |
+Losses: <span id="losses">0</span>
+</div>
+
+<div class="game-board" id="board"></div>
+
+<button onclick="resetGame()">Restart Game</button>
+
+<script>
+
+const symbols = ['🍎','🍌','🍇','🍓','🍎','🍌','🍇','🍓'];
+
+let board = document.getElementById("board");
+
+let firstCard = null;
+let secondCard = null;
+let lockBoard = false;
+let matches = 0;
+let attempts = 0;
+const maxAttempts = 10;
+
+// Load score from localStorage
+let wins = Number(localStorage.getItem("wins")) || 0;
+let losses = Number(localStorage.getItem("losses")) || 0;
+
+updateScore();
+
+function shuffle(array){
+    array.sort(()=>Math.random()-0.5);
+}
+
+function createBoard(){
+
+    board.innerHTML="";
+    shuffle(symbols);
+
+    symbols.forEach(symbol=>{
+
+        let card=document.createElement("div");
+        card.classList.add("card");
+        card.dataset.symbol=symbol;
+        card.innerHTML="?";
+
+        card.addEventListener("click",flipCard);
+
+        board.appendChild(card);
+
+    });
+
+}
+
+function flipCard(){
+
+    if(lockBoard) return;
+
+    if(this===firstCard) return;
+
+    this.innerHTML=this.dataset.symbol;
+    this.classList.add("flipped");
+
+    if(!firstCard){
+        firstCard=this;
+        return;
+    }
+
+    secondCard=this;
+    lockBoard=true;
+    attempts++;
+
+    if(firstCard.dataset.symbol===secondCard.dataset.symbol){
+
+        matches++;
+
+        firstCard.removeEventListener("click",flipCard);
+        secondCard.removeEventListener("click",flipCard);
+
+        resetTurn();
+
+        if(matches===4){
+            wins++;
+            localStorage.setItem("wins",wins);
+            updateScore();
+
+            setTimeout(()=>{
+                alert("You Win!");
+                resetGame();
+            },300);
+        }
+
+    }
+    else{
+
+        setTimeout(()=>{
+
+            firstCard.innerHTML="?";
+            secondCard.innerHTML="?";
+
+            firstCard.classList.remove("flipped");
+            secondCard.classList.remove("flipped");
+
+            resetTurn();
+
+            if(attempts>=maxAttempts){
+
+                losses++;
+                localStorage.setItem("losses",losses);
+                updateScore();
+
+                alert("You Lost!");
+                resetGame();
+            }
+
+        },800);
+
+    }
+
+}
+
+function resetTurn(){
+    firstCard=null;
+    secondCard=null;
+    lockBoard=false;
+}
+
+function updateScore(){
+    document.getElementById("wins").textContent=wins;
+    document.getElementById("losses").textContent=losses;
+}
+
+function resetGame(){
+
+    matches=0;
+    attempts=0;
+    firstCard=null;
+    secondCard=null;
+    lockBoard=false;
+
+    createBoard();
+
+}
+
+createBoard();
+
+</script>
+
+</body>
+</html>

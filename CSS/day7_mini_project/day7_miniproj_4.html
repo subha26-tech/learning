@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centered Card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff956d, #ff9a70);
+            font-family: Georgia, "Times New Roman", serif;
+        }
+        .card {
+            width: 500px;
+            min-height: 315px;
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+        .card h1 {
+            color: #303030;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+        .card p {
+            max-width: 360px;
+            color: #555;
+            font-size: 22px;
+            line-height: 1.2;
+            margin-bottom: 38px;
+        }
+        .card button {
+            border: none;
+            border-radius: 7px;
+            padding: 17px 36px;
+            background: #ff4b22;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 23px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+        .card button:hover {
+            background: #e9421c;
+        }
+    </style>
+</head>
+
+<body>
+  <section class="card">
+    <h1>Welcome to Vetri Tech</h1>
+    <p>
+      Your success starts here. Join us and<br />
+      build your future!
+    </p>
+    <button>Get Started</button>
+  </section>
+</body>
+</html>

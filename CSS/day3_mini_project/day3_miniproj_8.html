@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter Subscription Banner</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+        }
+        .banner{
+            width:100vw;
+            background:#4A90E2;
+            color:white;
+            text-align:center;
+            padding:5vmin;
+        }
+        .banner h1{
+            font-size:2rem;
+            margin-bottom:1rem;
+        }
+        .banner p{
+            font-size:1.2em;
+            margin-bottom:2vmin;
+        }
+        .subscribe-form{
+            width:100%;
+        }
+        .subscribe-form input[type="email"]{
+            width:60%;
+            padding:0.8em;
+            font-size:1rem;
+            border:none;
+            border-radius:5px;
+        }
+        .subscribe-form button{
+            padding:12px 20px;
+            margin-left:10px;
+            font-size:1rem;
+            background:#fa9417;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        .subscribe-form button:hover{
+            background:#b94f1d;
+        }
+        .note{
+            font-size:2vmin;
+            margin-top:2vmin;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Subscribe to Our Newsletter</h1>
+        <p>Get the latest updates and exclusive offers delivered to your inbox.</p>
+        <form class="subscribe-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p class="note">We respect your privacy. Unsubscribe anytime.</p>
+    </div>
+</body>
+</html>

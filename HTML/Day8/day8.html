@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Logo Landing Page</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    form {
+      max-width: 300px;
+    }
+    
+    #task_31 input,#task_32 input {
+      display: block;
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 100%;
+    }
+    
+    #task_31 fieldset { border: none; margin-bottom: 20px; }
+    #task_31 legend { font-weight: bold; }
+    .step { display: none; }
+    .step:target { display: block; }
+    .step:first-of-type { display: block; } /* Show first step by default */
+    button { margin-top: 10px; }
+    a.button-link {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #0078d7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    /*Task 35 starts*/
+     .preview-box {
+      width: 150px;
+      height: 100px;
+      border: 2px solid #000;
+      margin-top: 10px;
+      background-color: #0078d7;
+    }
+    /*Task 35 ends*/
+
+    /*Task 36 starts*/
+    #date_label label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+    #future-date input[type="date"] {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .form-group {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+    }
+    /*Task 36 ends*/
+
+    /* Task 38 starts*/
+    #task_38 fieldset {
+      border: 2px solid #ccc;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    #task_38 legend {
+      font-weight: bold;
+      padding: 0 0.5rem;
+    }
+    #task_38 label {
+      display: block;
+      margin-top: 1rem;
+    }
+    #task_38 input,
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      box-sizing: border-box;
+    }
+    #task_38 button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+    }
+    /* Task 38 ends*/
+
+    /* Task 39 starts*/
+    #task_39 input[type="text"], textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 8px;
+    }
+    #task39 button {
+        padding: 10px 20px;
+    }
+    /* Task 39 ends*/
+
+    /*Task 40 starts*/
+    .donation-card {
+            background: rgb(211, 201, 154);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 400px;
+    }
+    #extraOptions {
+        display: none;
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background: #f8f8f8;
+    }
+    #task_40 label {
+        display: block;
+        margin-top: 15px;
+    }
+    #task_40 button {
+        margin-top: 20px;
+        padding: 10px 18px;
+    }
+    /*Task 40 ends*/
+  </style>
+  
+</head>
+<body>
+    <section id="task_31">
+        <h2>Task 31</h2>
+        <h3>Registration Form</h3>
+
+        <!-- Step 1: Email -->
+        <form action="#step2" method="get" id="step1" class="step">
+            <fieldset>
+            <legend>Step 1: Email</legend>
+            <label>Email:</label><br>
+            <input type="email" name="email" required>
+            <br><br>
+            <button type="submit">Next</button>
+            </fieldset>
+        </form>
+
+        <!-- Step 2: Password -->
+        <form action="#step3" method="get" id="step2" class="step">
+            <fieldset>
+            <legend>Step 2: Password</legend>
+            <label>Password:</label><br>
+            <input type="password" name="password" minlength="6" required>
+            <br><br>
+            <a href="#step1" class="button-link">Back</a>
+            <button type="submit">Next</button>
+            </fieldset>
+        </form>
+
+        <!-- Step 3: Profile Info -->
+        <form action="#step1" method="get" id="step3" class="step">
+            <fieldset>
+            <legend>Step 3: Profile Info</legend>
+            <label>Full Name:</label><br>
+            <input type="text" name="fullname" required><br><br>
+            <label>Age:</label><br>
+            <input type="number" name="age" min="1" required>
+            <br><br>
+            <a href="#step2" class="button-link">Back</a>
+            <button type="submit">Register</button>
+            </fieldset>
+        </form>        
+    </section>
+    <hr>
+    <section id="task_32">
+        <h2>Task 32</h2>
+        <h3>Login</h3>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password:</label>
+            <!-- minlength enforces password length -->
+            <input type="password" id="password" minlength="6" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    <hr>
+    <section id="task_33">
+        <h2>Task 33</h2>
+        <h3>Subscribe Now</h3>
+        <form>
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <br><br>
+
+            <!-- Gender Radio Buttons -->
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <br><br>
+
+            <!-- Favorite Color Selector -->
+            <label for="color">Favorite Color:</label>
+            <select id="color" name="color" required>
+            <option value="" disabled selected>Select your color</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="purple">Purple</option>
+            </select>
+            <br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    <hr>
+    <section id="task_34">
+        <h2>Task 34</h2>
+        <h3>Range Slider Preview</h3>
+        <form>
+            <label for="myRange">Choose a value:</label>
+            <input type="range" id="myRange" name="myRange" min="0" max="100" value="50" oninput="rangeValue.textContent = this.value">
+            <span id="rangeValue">50</span>
+        </form>
+    </section>
+    <hr>
+    <section id="task_35">
+        <h2>Task 35</h2>
+        <h3>Color Picker Preview</h3>
+        <form>
+            <label for="colorPicker">Choose a color:</label>
+            <input type="color" id="colorPicker" name="colorPicker" value="#0078d7" oninput="preview.style.backgroundColor = this.value">
+            <div id="preview" class="preview-box"></div>
+        </form>
+    </section>
+    <hr>
+    <section id="task_36">
+        <h2>Task 36</h2>
+        <h3>Future Date Picker</h3>
+        <div class="form-group">
+            <label id="date_label" for="future-date">Choose a future date:</label>
+            <input type="date" id="future-date" required>
+        </div>
+        <script>
+            // 1. Get today's date
+            const today = new Date();
+            
+            // 2. Add 1 day to get "tomorrow"
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            
+            // 3. Format tomorrow's date to YYYY-MM-DD (required by HTML5 date input)
+            const yyyy = tomorrow.getFullYear();
+            const mm = String(tomorrow.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+            const dd = String(tomorrow.getDate()).padStart(2, '0');
+            
+            const minDate = `${yyyy}-${mm}-${dd}`;
+            
+            // 4. Set the min attribute of the input
+            document.getElementById('future-date').setAttribute('min', minDate);
+        </script>
+    </section>
+    
+    <hr>
+    <section id="task_37">
+        <h2>Task 37</h2>
+        <h3>Autocomplete Search Bar</h3>
+        <div>
+            <label for="tech-search">Search Technologies:</label>
+            <input type="search" id="tech-search" name="tech-search" list="tech-options" placeholder="e.g. HTML...">
+            
+            <datalist id="tech-options">
+                <option value="HTML">
+                <option value="CSS">
+                <option value="JavaScript">
+                <option value="React">
+                <option value="Vue">
+                <option value="Angular">
+                <option value="Node.js">
+            </datalist>
+        </div>
+    </section>
+    <hr>
+    <section id="task_38">
+        <h2>Task 38</h2>
+        <h3>Shipping Address Form</h3>
+        <form>
+
+            <fieldset>
+                <legend>Shipping Address</legend>
+
+                <label for="fullName">Full Name</label>
+                <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                minlength="2"
+                autocomplete="name"
+                >
+
+                <label for="address1">Street Address</label>
+                <input
+                type="text"
+                id="address1"
+                name="address1"
+                required
+                autocomplete="address-line1"
+                >
+
+                <label for="city">City</label>
+                <input
+                type="text"
+                id="city"
+                name="city"
+                required
+                autocomplete="address-level2"
+                >
+
+                <label for="state">State/Province</label>
+                <input
+                type="text"
+                id="state"
+                name="state"
+                required
+                autocomplete="address-level1"
+                >
+
+                <label for="zip">ZIP / Postal Code</label>
+                <input
+                type="text"
+                id="zip"
+                name="zip"
+                required
+                pattern="[A-Za-z0-9 -]{3,10}"
+                title="Enter a valid postal code."
+                autocomplete="postal-code"
+                >
+
+                <label for="country">Country</label>
+                <select
+                id="country"
+                name="country"
+                required
+                autocomplete="country"
+                >
+                <option value="">Select a country</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="IN">India</option>
+                <option value="UK">United Kingdom</option>
+                </select>
+
+            </fieldset>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </section>
+    <hr>
+    <section id="task_39">
+        <h2>Task 39</h2>
+        <h3>Feedback Form</h3>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="feedback">Feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="5" required></textarea><br>
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">I agree to the terms and conditions.</label>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <hr>
+    <section id="task_40">
+        <div class="donation-card">
+            <h2>Make a Donation</h2>
+
+            <form>
+
+                <label for="amount">Donation Amount</label>
+                <select id="amount">
+                <option value="">Select an amount</option>
+                <option value="25">$25</option>
+                <option value="50">$50</option>
+                <option value="75">$75</option>
+                <option value="100">$100</option>
+                <option value="250">$250</option>
+                </select>
+
+                <div id="extraOptions">
+                    <h3>Special Donor Options</h3>
+                    <label>
+                        <input type="checkbox">
+                        Receive VIP donor updates
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Join the Leadership Circle
+                    </label>
+                    <label for="message">Recognition Name</label>
+                    <input type="text" id="message" placeholder="Optional name">
+                </div>
+
+                <button type="submit">Donate</button>
+            </form>
+        </div>
+
+        <script>
+            const amountSelect = document.getElementById("amount");
+            const extraOptions = document.getElementById("extraOptions");
+
+            amountSelect.addEventListener("change", function () {
+                const amount = Number(this.value);
+
+                if (amount >= 100) {
+                    extraOptions.style.display = "block";
+                } else {
+                    extraOptions.style.display = "none";
+                }
+            });
+        </script>
+    </section>
+</body>
+</html>

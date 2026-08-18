@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        /* 1. px for heading */
+        h1 {
+            font-size: 36px;
+        }
+        /* 5. rem for heading */
+        h2 {
+            font-size: 2rem;
+        }
+        /* 2. cm for paragraph margin */
+        .cm-paragraph {
+            margin: 1cm;
+            background-color: #f2f2f2;
+        }
+        /* 4. em for paragraph font size */
+        .parent {
+            font-size: 20px;
+        }
+        .parent p {
+            font-size: 1.5em;
+        }
+        /* 3. % width for section */
+        section {
+            width: 70%;
+            background: lightblue;
+            padding: 10px;
+        }
+        /* 6. vw for div width */
+        .vw-box {
+            width: 60vw;
+            background: orange;
+            padding: 10px;
+        }
+        /* 7. vh for footer height */
+        footer {
+            height: 20vh;
+            background: gray;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* 8. vmin for scalable text */
+        .vmin-text {
+            font-size: 5vmin;
+            color: green;
+        }
+        /* 9. vmax for container padding */
+        .vmax-container {
+            padding: 3vmax;
+            background: lightgreen;
+        }
+        /* 10. Button with rem font-size */
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+        }
+        /* 11. Line-height using em */
+        .line-height {
+            line-height: 2em;
+        }
+        /* 12. Full-screen hero banner */
+        .hero {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to right, #4CAF50, #2196F3);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+        }
+        /* 13. Mixed units */
+        .layout {
+            width: 80%;
+            padding: 20px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>1. Heading using px</h1>
+
+    <h2>5. Heading using rem</h2>
+
+    <p class="cm-paragraph">
+        2. This paragraph has a margin of 1cm.
+    </p>
+
+    <section>
+        3. This section has a width of 70%.
+    </section>
+
+    <div class="parent">
+        Parent font-size: 20px
+        <p>4. Paragraph font-size is 1.5em.</p>
+    </div>
+
+    <div class="vw-box">
+        6. Width is 60vw.
+    </div>
+
+    <p class="vmin-text">
+        8. This text scales using vmin.
+    </p>
+
+    <div class="vmax-container">
+        9. Padding is set using vmax.
+    </div>
+
+    <button>
+        10. Button with rem font-size
+    </button>
+
+    <p class="line-height">
+        11. This paragraph uses line-height of 2em.<br>
+        Notice the spacing between lines.<br>
+        CSS units are useful for responsive design.
+    </p>
+
+    <div class="hero">
+        12. Full-Screen Hero Banner
+    </div>
+
+    <div class="layout">
+        13. Layout uses 80% width and 20px padding.
+    </div>
+    
+    <footer>
+        7. Footer height is 20vh.
+    </footer>
+
+</body>
+</html>

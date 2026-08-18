@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 Tasks</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial,sans-serif;
+    }
+    body{
+        background:#f4f4f4;
+        padding:20px;
+    }
+    section{
+        background:#fff;
+        border-radius:8px;
+        padding:20px;
+        margin-bottom:20px;
+        box-shadow:0 2px 5px rgba(0,0,0,.1);
+    }
+    .container{
+        border:2px solid black;
+        padding:10px;
+    }
+    .display{
+        display: flex;
+    }
+    .box{
+        background:#066fcc;
+        color:#fff;
+        padding:20px;
+        margin:5px;
+        text-align:center;
+    }
+    /* Task 1 */
+    .grow-1{ /* Task 1, 8 & 14 */
+        flex-grow: 1;
+    }
+    .grow-2{ /* Task 1, 7 & 8 */
+        flex-grow: 2;
+    }
+    .grow-3{
+        flex-grow: 3;
+    }
+    /* Task 2 */
+    .task-2{
+        width:300px;
+        flex-shrink:0;
+    }
+    /* Task 3, 9 & 14*/
+    .basis{
+        flex-basis: 200px;
+    }
+    /* Task 4 */
+    .order1{
+            order:3;
+    }
+    .order2{
+        order:1;
+    }
+    .order3{
+        order:2;
+    }
+    /* Task 5 */
+    .task-5{
+        height: 180px;
+    }
+    .self-center{ /* Task 5 & 10 */
+        align-self: center;
+    }
+    /* Task 6 */
+    .task-6{
+        height:400px;
+    }
+    .inner{
+        display: flex;
+        flex-direction: column;
+    }
+    .width{
+        flex:1
+    }
+    .c-width{
+        flex:4
+    }
+    /* Task 7 */
+    .task-7{
+        background:#333333;
+        color:white;
+        padding:10px;
+    }
+    .contact{
+        margin-left: 20px;
+    }
+    /* Task 9 & 13*/
+    .task-9-13{
+        flex-wrap: wrap;
+    }
+    /* Task 10 */
+    .task-10{
+        height: 180px;
+    }
+    .self-fend{
+        align-self: flex-end;
+    }
+    /* Task 11 */
+    .flexshort-1{
+        flex: 1 0 200px;
+    }
+    .flexshort-2{
+        flex: 3 1 200px;
+    }
+    .flexshort-3{
+        flex: 1 1 200px;
+    }
+    /* Task 12 */
+    .task-12{
+        flex-direction:column;
+        width:250px;
+    }
+    .t12-content{
+        padding: 25px;
+    }
+    .t12-footer{
+        padding: 25px;
+        text-align: center;
+        background-color: #999;
+    }
+    /* Task 13 */
+    .task-13{
+        width: 250px;
+        height: 250px;
+    }
+    /* Task 15 */
+    .task-15{
+        flex-direction: row-reverse;
+    }
+    /* Task 16 */
+    .task-16{
+        flex-direction: column-reverse;
+        width: 120px;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>1. flex-grow</h2>
+        <div class="container display">
+            <div class="box grow-1">Box 1</div>
+            <div class="box grow-2">Box 2</div>
+            <div class="box grow-3">Box 3</div>
+        </div>
+    </section>
+    <section>
+        <h2>2. flex-shrink</h2>
+        <div class="container display">
+            <div class="box task-2">No Shrink</div>
+            <div class="box">Shrink</div>
+            <div class="box">Shrink</div>
+        </div>
+    </section>
+    <section>
+        <h2>3. flex-basis</h2>
+        <div class="container display">
+            <div class="box basis">Box 1</div>
+            <div class="box basis">Box 2</div>
+            <div class="box basis">Box 3</div>
+        </div>
+    </section>
+    <section>
+        <h2>4. order</h2>
+        <div class="container display">
+            <div class="box order1">1</div>
+            <div class="box order2">2</div>
+            <div class="box order3">3</div>
+        </div>
+    </section>
+    <section>
+        <h2>5. align-self center</h2>
+        <div class="container display task-5">
+            <div class="box">Left</div>
+            <div class="box self-center">Center</div>
+            <div class="box">Right</div>
+        </div>
+    </section>
+    <section>
+        <h2>6. Nested Flexbox</h2>
+        <div class="container display task-6">
+            <div class="box width">Left</div>
+            <div class="inner c-width">
+                <div class="box width">Top</div>
+                <div class="box c-width">Center</div>
+                <div class="box width">Bottom</div>
+            </div>
+            <div class="box width">Right</div>
+        </div>
+    </section>
+    <section>
+        <h2>7. Responsive Navbar</h2>
+        <nav class="container display task-7">
+            <div class="grow-2">Home</div>
+            <div>About</div>
+            <div class="contact">Contact</div>
+        </nav>
+    </section>
+    <section>
+        <h2>8. Three Columns</h2>
+        <div class="container display">
+            <div class="box grow-1">1</div>
+            <div class="box grow-2">2</div>
+            <div class="box grow-1">3</div>
+        </div>
+    </section>
+    <section>
+        <h2>9. Grid using flex-basis</h2>
+        <div class="container display task-9-13">
+            <div class="box basis">1</div>
+            <div class="box basis">2</div>
+            <div class="box basis">3</div>
+            <div class="box basis">4</div>
+            <div class="box basis">5</div>
+            <div class="box basis">6</div>
+        </div>
+    </section>
+    <section>
+        <h2>10. Different align-self</h2>
+        <div class="container display task-10">
+            <div class="box">Start</div>
+            <div class="box self-center">Center</div>
+            <div class="box self-fend">End</div>
+        </div>
+    </section>
+    <section>
+        <h2>11. flex shorthand</h2>
+        <div class="container display">
+            <div class="box flexshort-1">1</div>
+            <div class="box flexshort-2">2</div>
+            <div class="box flexshort-3">3</div>
+        </div>
+    </section>
+    <section>
+        <h2>12. Card Layout</h2>
+        <div class="container display task-12">
+            <img src="https://png.pngtree.com/background/20250109/original/pngtree-cartoon-kids-walking-wallpaper-picture-image_15160714.jpg" alt="Cartoon Image">
+            <div class="t12-content">Bunny and Boy holding hands together and walking.</div>
+            <div class="t12-footer">Footer</div>
+        </div>  
+    </section>
+
+    <!-- 13 -->
+    <section>
+        <h2>13. Responsive Gallery</h2>
+        <div class="container display task-9-13">
+            <div class="box"><img class="task-13" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDOiocqOenvRCbSghFeLLGhMYy_UFHUfqvR3kuZUuKYw&s=10" alt="Bunny and Boy 1"></div>
+            <div class="box"><img class="task-13" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYca5no3ujPiYNxWxoVNEUNmR7ZzvYyp6NQLb2RQ-z9Q&s" alt="Bunny and Boy 2"></div>
+            <div class="box"><img class="task-13" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdatkDIxDG3hFhDuWFGCGwnfWkw1cSxDIHXNux6YstXWquD505KxEfIo0&s" alt="Bunny and Boy3"></div>
+            <div class="box"><img class="task-13" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJPNlyM15yu79QDVnMcEfk9e1_3XOnSEit34EUohINwQ&s" alt="Bunny and Boy4"></div>
+            <div class="box"><img class="task-13" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdmyIxZz_Cz6DIIkU1NlTHKAlEy1LW-c8IIXz0nqUebw&s=10" alt="Bunny and Boy5"></div>
+        </div>
+    </section>
+    <section>
+        <h2>14. Sidebar and Content Layout</h2>
+        <div class="container display">
+            <div class="box basis">Sidebar</div>
+            <div class="box grow-1">Content Area</div>
+        </div>
+    </section>
+    <section>
+        <h2>15. row-reverse</h2>
+        <div class="container display task-15">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </section>
+    <section>
+        <h2>16. column-reverse</h2>
+        <div class="container display task-16">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </section>
+    <section>
+        <h2>17. align-items baseline</h2>   
+        <div class="container display" style="align-items:baseline;">
+            <h1>Large</h1>
+            <p style="margin-left:20px;">Small Text</p>
+            <span style="margin-left:20px;">Medium</span>
+        </div>
+    </section>
+    <section>
+        <h2>18. justify-content:flex-start</h2>
+        <div class="container display" style="justify-content:flex-start;">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">box3</div>
+        </div>
+    </section>
+    <section>
+        <h2>19. Equal Height Cards</h2>
+        <div class="container display" style="align-items: stretch;">
+            <div class="box">Short</div>
+            <div class="box">
+                Long Content<br>
+                Line2<br>Line3<br>Line4
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>20. Individual align-self</h2>
+        <div class="container display" style="height:200px;">
+            <div class="box" style="align-self:center;">Center</div>
+            <div class="box" style="align-self:flex-end;">End</div>
+        </div>
+    </section>
+    <section>
+        <h2>21. gap:20px</h2>
+        <div class="display" style="flex-wrap:wrap;gap:20px;">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        </div>
+    </section>
+    <section>
+        <h2>22. nowrap</h2>
+        <div class="container display" style="flex-wrap:nowrap;overflow:auto;">
+            <div class="box" style="min-width:250px;">Item 1</div>
+            <div class="box" style="min-width:250px;">Item 2</div>
+            <div class="box" style="min-width:250px;">Item 3</div>
+        </div>
+    </section>
+    <section>
+        <h2>23. Logo Left Side and Menu Right Side</h2>
+        <nav class="display" style="background:#333;color:white;padding:15px;">
+            <div>LOGO</div>
+            <div style="margin-left:auto;display:flex;gap:20px;">
+                <div>Home</div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+        </nav>
+    </section>
+    <section>
+        <h2>24. Dashboard</h2>
+        <div class="container display">
+            <div style="width:180px;background:#ccc;padding:20px;">Sidebar</div>
+            <div style="display:flex;flex-direction:column;flex:1;">
+                <div style="background:#ddd;padding:20px;">Header</div>
+                <div class="container">
+                    <div class="box" style="flex:1;">Widget 1</div>
+                    <div class="box" style="flex:1;">Widget 2</div>
+                    <div class="box" style="flex:1;">Widget 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>25. Vertical Card</h2>
+        <div class="container display" style="flex-direction:column;width:250px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNBBs7cENlen8kCCO9cZD54OM391Y-daIe1H61o_M_GQ&s=10">
+            <div style="padding:15px;">Card Text</div>
+            <button style="margin:15px;">Read More</button>
+        </div>
+    </section>
+    <section>
+        <h2>26. Center Login Form</h2>
+        <div style="display:flex;justify-content:center;align-items:center;min-height:100vh;background:#eee;">
+            <form style="display:flex;flex-direction:column;width:250px;background:white;padding:20px;box-shadow:0 0 10px gray;">
+                <h3>Login</h3>
+                <input type="text" placeholder="Username" style="margin:10px 0;padding:10px;">
+                <input type="password" placeholder="Password" style="margin:10px 0;padding:10px;">
+                <button style="padding:10px;">Login</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Drag and Drop Image Gallery</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .source, .gallery {
+    width: 45%;
+    min-height: 300px;
+    border: 2px dashed #aaa;
+    padding: 10px;
+  }
+
+  .source img {
+    width: 150px;
+    cursor: grab;
+    margin: 10px;
+  }
+
+  .gallery {
+    background: #f9f9f9;
+  }
+
+  .gallery.dragover {
+    border-color: #4CAF50;
+    background: #eaffea;
+  }
+
+  .gallery img {
+    width: 120px;
+    margin: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="source">
+  <h3>Drag Images From Here</h3>
+  <img src="https://picsum.photos/id/237/200/200" draggable="true" id="img1">
+  <img src="https://picsum.photos/id/1025/200/200" draggable="true" id="img2">
+</div>
+
+<div class="gallery" id="gallery">
+  <h3>Drop Here (Gallery)</h3>
+</div>
+
+<script>
+  const images = document.querySelectorAll('.source img');
+  const gallery = document.getElementById('gallery');
+
+  // When drag starts, store image id
+  images.forEach(img => {
+    img.addEventListener('dragstart', (e) => {
+      e.dataTransfer.setData('text/plain', e.target.src);
+    });
+  });
+
+  // Allow drop
+  gallery.addEventListener('dragover', (e) => {
+    e.preventDefault(); // necessary to allow drop
+    gallery.classList.add('dragover');
+  });
+
+  gallery.addEventListener('dragleave', () => {
+    gallery.classList.remove('dragover');
+  });
+
+  // Handle drop
+  gallery.addEventListener('drop', (e) => {
+    e.preventDefault();
+    gallery.classList.remove('dragover');
+
+    const imgSrc = e.dataTransfer.getData('text/plain');
+
+    const newImg = document.createElement('img');
+    newImg.src = imgSrc;
+
+    gallery.appendChild(newImg);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 - Mini Project 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+         html,body{
+            width: 100%;
+            height: 100%;
+            margin:0;
+        }
+        .portfolio{
+            display: flex; 
+            margin: 30px 200px;
+            min-width: 100vh;
+            min-height: 80vh;
+        }
+        .left{
+            flex: 1;
+            background-color: lightgray;
+            border: 2px;
+            border-radius: 10px;
+            box-shadow:0 10px 35px rgba(0,0,0,.25);
+            padding: 20px;
+        }
+        .right{
+            flex: 3;
+            background-color: rgba(245,245,245,0.5);
+            border-radius: 10px;
+            padding-left: 20px;
+        }
+        .profile{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile h1,.right h2{
+            margin-bottom: 0px;
+        }
+        .left h3{
+            color: rgb(33, 124, 188);
+        }
+        .profile h3{
+            margin-top: 15px;
+            color: black;
+        }
+        .check-mark{
+           padding-right: 10px;
+        }
+        ul{
+            list-style:none;
+            padding-left: 0px;
+        }
+        .project p{
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="portfolio">
+
+    <div class="left">
+        <div class="profile">
+            <img src="https://img.icons8.com/?size=160&id=912rt74nJqQV&format=png" alt="Profile Photo">
+            <h1>Subha R</h1>
+            <h3>Software engineer</h3>
+        </div>
+        <h3>PROFILE SUMMARY</h3>
+        <p>
+            Software engineer in designing and developing web-based applications. Skilled in leading teams, reviewing code, and implementing best practices to ensure efficient project delivery. Adaptable to evolving project requirements, with a commitment to contributing throughout the entire software development lifecycle.
+        </p>
+        <div class="contact">
+            <h3>CONTACT</h3>
+            <p>📧 subha@email.com</p>
+            <p>📍 Chennai, India</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <section>
+            <h2>About Me</h2>
+            <div style="flex:1; height:2px; background:rgb(33, 124, 188);"></div>
+            <p>
+                I am a creative and dedicated web-based application developer with
+                strong knowledge of HTML, Primefaces, Java and Springboot.
+            </p>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <div style="flex:1; height:2.5px; background:rgb(33, 124, 188);"></div>
+            <ul>
+                <li><span><i class="check-mark">&#10004;</i>HTML</span></li>
+                <li><span><i class="check-mark">&#10004;</i>CSS</span></li>
+                <li><span><i class="check-mark">&#10004;</i>Primefaces</span></li>
+                <li><span><i class="check-mark">&#10004;</i>Java</span></li>
+                <li><span><i class="check-mark">&#10004;</i>Spring Boot</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div style="flex:1; height:2.5px; background:rgb(33, 124, 188);"></div>
+            <div class="project">
+                <h3>ERP Product</h3>
+                <p>A fully responsive web based ERP (Enterprise Resource Planning) product using primefaces & java.</p>
+            </div>
+            <div class="project">
+                <h3>POS Product</h3>
+                <p>The point of sale (POS) is the time and place at which a retail transaction is completed.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div style="flex:1; height:2px; background:rgb(33, 124, 188);"></div>
+            <p><strong>B.Sc Mathematics</strong></p>
+            <p>ABC College (2022-2025)</p>
+        </section>
+
+    </div>
+
+</div>
+
+</body>
+</html>

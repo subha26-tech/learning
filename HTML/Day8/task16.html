@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Canvas Progress Bar</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+    canvas {
+      background: #fff;
+      border: 2px solid #333;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="progressCanvas" width="400" height="80"></canvas>
+
+<script>
+  const canvas = document.getElementById("progressCanvas");
+  const ctx = canvas.getContext("2d");
+
+  const width = canvas.width;
+  const height = canvas.height;
+
+  let progress = 0;
+
+  function drawProgressBar(progress) {
+    // Clear canvas
+    ctx.clearRect(0, 0, width, height);
+
+    // Background bar
+    ctx.fillStyle = "#ddd";
+    ctx.fillRect(20, 25, width - 40, 30);
+
+    // Progress bar fill
+    ctx.fillStyle = "#4caf50";
+    ctx.fillRect(20, 25, (width - 40) * progress, 30);
+
+    // Border
+    ctx.strokeStyle = "#333";
+    ctx.strokeRect(20, 25, width - 40, 30);
+
+    // Text
+    ctx.fillStyle = "#000";
+    ctx.font = "16px Arial";
+    ctx.fillText(Math.floor(progress * 100) + "%", width / 2 - 20, 20);
+  }
+
+  function animate() {
+    if (progress < 1) {
+      progress += 0.01; // speed of loading
+      drawProgressBar(progress);
+      requestAnimationFrame(animate);
+    } else {
+      drawProgressBar(1);
+    }
+  }
+
+  // Start animation
+  drawProgressBar(0);
+  animate();
+</script>
+
+</body>
+</html>

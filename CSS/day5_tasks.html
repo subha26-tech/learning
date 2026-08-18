@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Tasks</title>
+    <style>
+        body{
+            background-color: #f4f4f4;
+        }
+        /* Task 1 */
+        section {
+            border: 3px solid blue;
+        }
+        /* Task 2 */
+        button {
+            border: none;
+            background-color: lightgreen;
+            border-radius: 15px;
+            font-size: 2rem;
+            padding: 15px 20px;
+        }
+        /* Task 3 */
+        .card-1{
+            width:250px;
+            height: 150px;
+            background-color: lightskyblue;
+            box-shadow: 10px 10px 5px lightseagreen;
+            text-align: center;
+            word-break: normal;
+        }
+        /* Task 5 */
+        header {
+            text-align: center;
+            background-color: lightyellow;
+            height: 100px;
+            padding: 20px;
+        }
+        /* Task 4 */
+        header h1 {
+            font-size: 3rem;
+            color:#444444;
+            text-shadow: 5px 2px 5px cyan;
+        }
+        /* Task 6 */
+        .scroll-content-box{
+            width: 300px;
+            height: 200px;
+            overflow-y: scroll;
+            background-color:azure;
+            scrollbar-width: 5px;
+            scrollbar-color: #3498db #f9f6f6;
+        }
+        /* Task 7 */
+        .bg-img{
+            width: auto;
+            height:300px;
+            border: 1px solid #444444;
+            background-image: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190622/ourmid/pngtree-boao-asia-forum-blue-technology-asia-landmark-silhouette-poster-image_206448.jpg);
+            background-repeat: no-repeat;
+            color: white;
+        }
+        /* Task 8 */
+        .t8-header{
+            padding: 60px 20px;
+            background-image: url(https://static.vecteezy.com/system/resources/thumbnails/046/788/045/small/internet-concept-of-global-business-ideas-of-conducting-business-operations-and-transactions-on-a-global-scale-e-commerce-digital-marketing-online-payments-remote-collaboration-photo.jpeg);
+            background-size: cover;
+            color: white;
+        }
+        /* Task 9*/
+        footer {
+            background-image: url(https://static.vecteezy.com/system/resources/thumbnails/046/788/045/small/internet-concept-of-global-business-ideas-of-conducting-business-operations-and-transactions-on-a-global-scale-e-commerce-digital-marketing-online-payments-remote-collaboration-photo.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        /* Task 10*/
+        .decorative-box {
+            width: 400px;
+            height: 200px;
+            border: 50px solid transparent;
+            border-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxuN7E8wAjqFzJbLUEbVR51QZjyxMVVOGsCucRoXAebw&s=10) 100 stretch;
+            text-align: center;
+        }
+        /* Task 11 */
+        .modern-card{
+            width:250px;
+            height: 150px;
+            border-radius: 20px;
+            background-color: rgb(116, 128, 238);
+            box-shadow: 10px 10px 5px rgb(97, 57, 229);
+            text-align: center;
+        }
+        /* Task 12 */
+        button:hover{
+            box-shadow: 10px 10px 5px rgb(8, 52, 1);
+        }
+        /* Task 13*/
+        .container{
+            border: 2px dashed red; /* Task 14*/
+            width:180px;
+            height: 100px;
+            padding: 15px;
+            overflow: hidden;
+        }
+        .content{
+            width: 250px;
+            height: 150px;
+            background-color: rgb(215, 215, 22);
+        }
+        /* Task 15 */
+        .card-2{
+            width:250px;
+            height: 150px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0px 8px 12px rgba(0, 0, 0,0.12);
+            text-align: center;
+            word-break: normal;
+        }
+        /* Task 16 */
+        .t16-p{
+            font-size: 32px;
+            text-shadow: 2px 2px 4px gray;
+        }
+        /* Task 17 */
+        .t17-article{
+            width: auto;
+            height: 100px;
+            background-color: lightblue;
+        }
+        /* Task 18 */
+        .scroll-content{
+            width: 200px;
+            background-color: rgb(215, 215, 22);
+            overflow-x: scroll;
+            white-space: nowrap;
+        }
+        /* Task 19 */
+        .tile{
+            height: 500px;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3F_EZ0ZD9hfmLTDdqzTr06Bsl6I83sYvBFtLhPqreVA&s=10);
+            background-repeat: repeat-x;
+        }
+        /* Task 20 & 21 */
+        .scroll-section {
+            height: 500px;
+            padding: 40px;
+            color: black;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHfWWCt_joqcMTUorC_HOUmkt5zNu8-EKltKd7GWh6kg&s=10");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-attachment:scroll;
+            background-color: lightblue;
+            border: 3px solid navy;
+        }
+        /* Task 22 */
+        .t22-img{
+            border-style: dotted;
+            border-color: green;
+            border-width: 4px;
+        }
+        /* Task 23 */
+        header h1:hover{
+            color: blue;
+        }
+        /* Task 24 */
+        .panel{
+            background-color: rgb(127, 214, 255);
+            border-left: 6px solid orange;
+            padding: 20px;
+        }
+        /* Task 25 */
+        .banner{
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to right, #eb5f35, #dfbe16);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            font-family: Arial, sans-serif;
+        }
+        /* Task 26 */
+        .small-box{
+           width: 200px; 
+           height: 100px;
+           background-color: bisque; 
+           overflow: scroll;
+           white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <h4>Task 5 & 4 & 23</h4>
+    <header>
+        <h1>Text Shadow</h1>
+    </header>
+    <hr>
+    <main>
+        <h4>Task 1</h4>
+        <section>
+            Solid blue border with a width of 3px.
+        </section>
+        <h4>Task 2 & 12</h4>
+        <button>Click Me</button>
+        <br>
+        <h4>Task 3</h4>
+        <div class="card-1">
+            Simulates a lifted card effect using box-shadow.
+        </div>
+        <br>
+        <h4>Task 6</h4>
+        <div class="scroll-content-box">
+            <h2>Vertical Scrollbar</h2>
+            <p>Scrollable content box with overflow-y: auto and custom-styled scrollbars.</p>
+            <p>Scrollable content box with overflow-y: auto and custom-styled scrollbars.</p>
+            <p>Scrollable content box with overflow-y: auto and custom-styled scrollbars.</p>
+            <p>Scrollable content box with overflow-y: auto and custom-styled scrollbars.</p>
+        </div>
+        <br>
+        <h4>Task 7</h4>
+            <div class="bg-img">
+                Background image with no repeat.
+            </div>
+        <h4>Task 8</h4>
+        <header class="t8-header">
+            <h2>Header Section</h2>
+        </header>
+        <br>
+        <h4>Task 10</h4>
+        <div class="decorative-box">
+            Decorative border using border image.
+        </div>
+        <h4>Task 11</h4>
+        <div class="modern-card">
+            Modern card design using box-shadow and border-radius.
+        </div>
+        <br>
+        <h4>Task 13 & 14</h4>
+        <div class="container">
+            <div class="content">
+                <h2>Clipped Content</h2>
+                <p>Container with hidden overflow and clipped content.</p>
+            </div>
+        </div>
+        <br>
+        <h4>Task 15</h4>
+        <div class="card-2">
+            Simple card with round corners and soft elevated appearance.
+        </div>
+        <br>
+        <h4>Task 16</h4>
+        <p class="t16-p">Subtle Depth Effect</p>
+        <h4>Task 17</h4>
+        <article class="t17-article">
+            Article with light blue background color
+        </article>
+        <br>
+        <h4>Task 18</h4>
+        <div class="scroll-content">
+            <h2>Horizontal Scrollbar</h2>
+            <p>Content using overflow-x: scroll with a fixed width.</p>
+        </div>
+        <br>
+        <h4>Task 19</h4>
+        <div class="tile">
+        </div>
+        <h4>Task 20 & 21</h4>
+        <section class="scroll-section">
+            <h2>Background Section</h2>
+            <p>
+                This section uses <b>background-size: contain</b>.
+            </p>
+            <p>
+                The image moves along with the page because
+                <b>background-attachment: scroll</b> is applied.
+            </p>
+        </section>
+        <br>
+        <h4>Task 22</h4>
+        <img class="t22-img" src="https://i0.wp.com/picjumbo.com/wp-content/uploads/fall-nature-background-with-leaves-free-image.jpeg?w=600&quality=80">
+        <br>
+        <h4>Task 24</h4>
+        <div class="panel">
+            <h3>Typography</h3>
+            <p>"Good typography makes reading effortless and enjoyable."</p>
+        </div>
+        <br>
+        <h4>Task 25</h4>
+        <div class="banner">
+            Full Width Banner with background gradient.
+        </div>
+        <br>
+        <h4>Task 26</h4>
+        <div class="small-box">
+            <h2>Small Box</h2>
+            <p>
+                This section uses <b>overflow: scroll</b>.
+            </p>
+            <p>
+                The small box contains lots of text content and a fixed height.
+            </p>
+        </div>
+    </main>
+
+    <h4>Task 9</h4>
+    <footer>
+        <h2>Footer Section</h2>
+        <p>© 2026 My Website</p>
+    </footer>
+
+</body>
+</html>

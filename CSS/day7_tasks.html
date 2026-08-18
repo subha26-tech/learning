@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7 Tasks</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:20px;
+            background:#f4f4f4;
+        }
+        .main-div{
+            background:white;
+            padding:15px;
+            margin-bottom:25px;
+            border-radius:8px;
+        }
+        .container{
+            border:2px solid black;
+            padding:10px;
+        }
+        .box{
+            background:steelblue;
+            color:white;
+            padding:20px;
+            margin:5px;
+            text-align:center;
+        }
+        /* Task 1 */
+        .task-1{
+            display:flex;
+        }
+        /* Task 2 */
+        .task-2{
+            display:flex;
+            flex-direction:column;
+        }
+        /* Task 3 */
+        .task-3{
+            display:flex;
+            justify-content:center;
+        }
+        /* Task 4 */
+        .task-4{
+            display:flex;
+            justify-content:flex-end;
+        }
+        /* Task 5 */
+        .task-5{
+            display:flex;
+            justify-content:space-between;
+        }
+        /* Task 6 */
+        .task-6{
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+        }
+        /* Task 7 */
+        .task-7{
+            display:flex;
+            justify-content:space-around;
+        }
+        /* Task 8 */
+        .task-8{
+            display:flex;
+            height:150px;
+            align-items:center;
+        }
+        /* Task 9 */
+        .task-9{
+            display:flex;
+            flex-wrap:wrap;
+            align-content:space-between;
+            height:220px;
+        }
+        /* Task 10 */
+        .task-10{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:200px;
+        }
+        /* Task 11 */
+        .task-11{
+            display:flex;
+            gap:20px;
+        }
+        /* Task 12 */
+        .task-12{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        /* Task 13 */
+        .task-13{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            background:#222;
+        }
+        .task-13 a{
+            color:white;
+            text-decoration:none;
+        }
+        /* Task 14 */
+        .task-14{
+            display:flex;
+        }
+        .grow{
+            flex-grow:1;
+        }
+        /* Task 15 */
+        .task-15{
+            display:flex;
+        }
+        .noShrink{
+            flex-shrink:0;
+            width:330px;
+        }
+        /* Task 16 */
+        .task-16{
+            display:flex;
+        }
+        .basis{
+            flex-basis:200px;
+        }
+        /* Task 17 */
+        .task-17{
+            display:flex;
+        }
+        .flexShort{
+            flex:1 0 150px;
+        }
+        /* Task 18 */
+        .task-18{
+            display:flex;
+        }
+        .order1{
+            order:3;
+        }
+        .order2{
+            order:1;
+        }
+        .order3{
+            order:2;
+        }
+        /* Task 19 */
+        .task-19{
+            display:flex;
+            align-items:center;
+            height:150px;
+        }
+        .self{
+            align-self:flex-end;
+        }
+        /* Task 20 */
+        .task-20{
+            display:flex;
+            flex-wrap:wrap-reverse;
+            width:250px;
+        }
+        /* Task 21 */
+        .task-21{
+            display:flex;
+        }
+        .column{
+            flex:1;
+        }
+        /* Task 22 */
+        .task-22{
+            display:flex;
+            justify-content:space-evenly;
+        }
+        /* Task 23 */
+        .outer{
+            display:flex;
+            height: 500px;
+        }
+        .inner{
+            display:flex;
+            flex-direction:column;
+        }
+        .center{
+            flex:3;
+        }
+        /* Task 24 */
+        .task-24{
+            display:flex;
+        }
+        @media(max-width:600px){
+            .task-24{
+                flex-direction:column;
+            }
+        }
+        /* Task 25 */
+        .task-25{
+            display:flex;
+            align-items:stretch;
+            height:200px;
+        }
+        /* Task 26 */
+        .loginPage{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:#ddd;
+        }
+        .login{
+            background:white;
+            padding:20px;
+            width:250px;
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+        }
+        input,button{
+            padding:10px;
+        }
+        button{
+            background:steelblue;
+            color:white;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <h2>1. display:flex</h2>
+        <div class="container task-1">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>2. flex-direction: column</h2>
+        <div class="container task-2">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>3. justify-content:center</h2>
+        <div class="container task-3">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>4. justify-content:flex-end</h2>
+        <div class="container task-4">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>5. space-between</h2>
+        <div class="container task-5">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>6. Vertical Sidebar</h2>
+        <div class="container task-6">
+            <div class="box">Home</div>
+            <div class="box">About</div>
+            <div class="box">Contact</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>7. Navigation Bar</h2>
+        <nav class="container task-7">
+            <div class="box">Home</div>
+            <div class="box">Services</div>
+            <div class="box">Contact</div>
+        </nav>
+    </div>
+    <div class="main-div">
+        <h2>8. align-items:center</h2>
+        <div class="container task-8">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>9. flex-wrap and align-content</h2>
+        <div class="container task-9">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+            <div class="box">10</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>10. Center Card</h2>
+        <div class="container task-10">
+            <div class="box">Card</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>11. gap</h2>
+        <div class="container task-11">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>12. flex-wrap</h2>
+        <div class="container task-12">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+            <div class="box">10</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>13. Footer</h2>
+        <div class="container task-13">
+            <a href="#">Home</a>
+            <a href="#">Privacy</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>14. flex-grow</h2>
+        <div class="container task-14">
+            <div class="box">Box 1</div>
+            <div class="box grow">Box 2 - Grow</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>15. flex-shrink:0</h2>
+        <div class="container task-15">
+            <div class="box noShrink">Box 1 - No Shrink</div>
+            <div class="box">Box 2</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>16. flex-basis</h2>
+        <div class="container task-16">
+            <div class="box basis">Box 1 default size - 200px</div>
+            <div class="box">Box 2</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>17. flex shorthand</h2>
+        <div class="container task-17">
+            <div class="box flexShort">Box 1 as Flex grow-1, shrink-0, basis-150px</div>
+            <div class="box">Box 2</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>18. order</h2>
+        <div class="container task-18">
+            <div class="box order1">1</div>
+            <div class="box order2">2</div>
+            <div class="box order3">3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>19. align-self</h2>
+        <div class="container task-19">
+            <div class="box">Box 1</div>
+            <div class="box" style="align-self:flex-end;">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>20. wrap-reverse</h2>
+        <div class="container task-20">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>21. Two Column Layout with equal space between</h2>
+        <div class="container task-21">
+            <div class="box column">Column 1</div>
+            <div class="box column">Column 2</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>22. Pricing Card layout with three columns spaced evenly</h2>
+        <div class="container task-22">
+            <div class="box">Basic<br>&dollar;199</div>
+            <div class="box">Standard<br>&dollar;599</div>
+            <div class="box">Premium<br>&dollar;999</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>23. Multilevel Layout</h2>
+        <div class="container outer">
+            <div class="box column">Left</div>
+            <div class="inner center">
+                <div class="box column">Top</div>
+                <div class="box center">Center</div>
+                <div class="box column">Bottom</div>
+            </div>
+            <div class="box column">Right</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>24. Responsive Flex Layout</h2>
+        <div class="container task-24">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>25. align-items:stretch</h2>
+        <div class="container task-25">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>26. Centered Login Form</h2>
+        <div class="loginPage">
+            <div class="login">
+                <h3>Login</h3>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button>Login</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

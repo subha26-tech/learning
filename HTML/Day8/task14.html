@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Color Preference Selector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease;
+      padding: 20px;
+    }
+
+    .box {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <label for="colorPicker">Choose background color: </label>
+    <input type="color" id="colorPicker" />
+  </div>
+
+  <script>
+    const colorPicker = document.getElementById("colorPicker");
+
+    // Load saved color on page load
+    const savedColor = localStorage.getItem("bgColor");
+    if (savedColor) {
+      document.body.style.backgroundColor = savedColor;
+      colorPicker.value = savedColor;
+    }
+
+    // Save and apply color on change
+    colorPicker.addEventListener("input", function () {
+      const selectedColor = this.value;
+      document.body.style.backgroundColor = selectedColor;
+      localStorage.setItem("bgColor", selectedColor);
+    });
+  </script>
+
+</body>
+</html>

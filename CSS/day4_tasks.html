@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography CSS Examples</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Task 18 */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        section {
+            font-family: 'Poppins', serif;
+        }
+        /* Task 4 */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Task 1 */
+        header {
+            text-align: center;
+        }
+        /* Task 2 */
+        a {
+            text-decoration: none;
+        }
+        /* Task 3 */
+        button {
+            text-transform: uppercase;
+        }
+        /* Task 5 */
+        .roboto {
+            font-family: 'Roboto',cursive;
+        }
+        /* Task 6 */
+        h1 {
+            font-size: 32px;
+        }
+        /* Task 7*/
+        em {
+            font-style: italic;
+        }
+        /* Task 8 */
+        strong {
+            font-weight: bold;
+        }
+        /* Task 9 */
+        p {
+            line-height: 1.5;
+        }
+        /* Task 10 */
+        h2 {
+            letter-spacing: 3px;
+        }
+        /* Task 11 & 23*/
+        nav {
+            text-transform: capitalize;
+            letter-spacing: 1px;
+        }
+        /* Task 12 */
+        .times-text {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        /* Task 13 */
+        footer {
+            font-family: 'Playfair Display', cursive;
+            font-size: 20px;
+            font-style: italic;
+        }
+        /* Task 14 */
+        .right-text {
+            text-align: right;
+        }
+        /* Task 15 */
+        span {
+            text-decoration: line-through;
+        }
+        /* Task 16 */
+        .lowercase {
+            text-transform: lowercase;
+        }
+        /* Task 17 */
+        h1, h2 {
+            font-family: 'Georgia',serif;
+        }
+        /* Task 19 */
+        li {
+            font-size: 18px;
+        }
+        /* Task 20 */
+        .normal-text {
+            font-style: normal;
+        }
+        /* Task 21 */
+        .light-text {
+            font-weight: 300;
+        }
+        /* Task 22 */
+        blockquote {
+            line-height: 2;
+        }
+        /* Task 24 */
+        .original {
+            text-transform: none;
+        }
+        /* Task 25 */
+        main {
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        /* 26. Lobster logo */
+        .logo {
+            font-family: 'Lobster', cursive;
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+
+    <h4>Task 1 & 6 & 17</h4>
+    <header>
+        <h1>Typography CSS Demo</h1>
+    </header>
+    <hr>
+    <main>
+        <h4>Task 2</h4>
+        <a href="#">This is a Link Without Underline</a>
+        <br><br>
+        <h4>Task 3</h4>
+        <button>Click Me</button>
+        <br>
+        <h4>Task 5</h4>
+        <p class="roboto">This paragraph uses the Roboto Google Font.</p>
+        <br>
+        <h4>Task 7</h4>
+        <p>This is <em>italic text</em>.</p>
+        <br>
+        <h4>Task 8</h4>
+        <p>This is <strong>bold text</strong>.</p>
+        <br>
+        <h4>Task 9</h4>
+        <p>This paragraph has a line-height of 1.5 to improve readability.</p>
+        <h4>Task 10 & 17</h4>
+        <h2>Letter Spacing Example</h2>
+        <br>
+        <h4>Task 11 & 23</h4>
+        <nav>
+            home | about us | services | contact
+        </nav>
+        <br>
+        <h4>Task 12</h4>
+        <div class="times-text">
+            This div uses Georgia with Times New Roman as a fallback.
+        </div>
+        <br>
+        <h4>Task 14</h4>
+        <p class="right-text">This paragraph is aligned to the right.</p>
+        <br>
+        <h4>Task 15</h4>
+        <p>
+            Price: <span>$100</span>
+        </p>
+        <h4>Task 16</h4>
+        <div class="lowercase">
+            THIS TEXT WILL APPEAR IN LOWERCASE.
+        </div>
+        <br>
+        <h4>Task 18</h4>
+        <section>
+            This section uses the Poppins Google Font.
+        </section>
+        <br>
+        <h4>Task 19</h4>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <h4>Task 20</h4>
+        <p class="normal-text">
+            This paragraph uses normal font style.
+        </p>
+        <br>
+        <h4>Task 21</h4>
+        <div class="light-text">
+            This text has font-weight: 300.
+        </div>
+        <br>
+        <h4>Task 22</h4>
+        <blockquote>
+            "Strength does not come from physical capacity. 
+             It comes from an indomitable will."
+        </blockquote>
+        <br>
+        <h4>Task 24</h4>
+        <h3 class="original">
+            Original Heading Text
+        </h3>
+        <br>
+        <h4>Task 26</h4>
+        <div class="logo">
+            My Website Logo
+        </div>
+    </main>
+
+    <h4>Task 13</h4>
+    <footer>
+        © 2026 Typography Example Footer
+    </footer>
+
+</body>
+</html>

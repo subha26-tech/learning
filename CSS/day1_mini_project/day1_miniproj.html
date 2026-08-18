@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 Mini Project</title>
+    <link rel="stylesheet" href="csssheet.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        ul{
+            list-style: none;
+        }
+        /*Mini project 1 starts*/
+        #mp1{
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #button2{
+            width: 200px;
+            height: 100px;
+            background:conic-gradient(yellow,green,orange,green);
+        }
+        /*Mini project 1 ends*/
+        /*Mini project 2 starts*/
+        #mp2 table{
+            border: 2px;
+            border-color: lightgrey;
+            border-collapse: collapse;
+            width: 600px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }              
+        #mp2 th{
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            background-color: rgb(29, 41, 58);
+        }
+        #mp2 tr:nth-child(odd){
+            background-color: rgb(229, 229, 229);
+        }
+        #mp2 td:first-child{
+            color: red;
+        }
+        /*Mini project 2 ends*/
+        /*Mini Project 3 starts*/
+        .mp3{
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+            background:linear-gradient(135deg,#56f5f5,#0785e4);
+            width: 800px;
+            height:500px;
+        }
+        .todo-container{
+            box-shadow: 0 10px 20px rgb(229, 229, 229);
+            padding: 25px;
+            border-radius: 15px;
+            background-color: white;
+        }
+        .mp3 label{
+            display: block;
+            padding: 12px;
+            border-radius: 8px;
+            background-color: rgba(244, 243, 244, 0.9);
+            cursor: pointer;
+        }        
+        .mp3 li {
+            margin: 12px 0;
+        }
+        .mp3 label:hover{
+            background: lightgray;
+        }
+        .mp3 input[type="checkbox"] {
+            accent-color: #4CAF50;
+        }
+        .mp3 input[type="checkbox"]:checked + span {
+            text-decoration: line-through;
+            color: gray;
+        }
+        /*Mini Projects 3 ends*/
+        /*Mini Projects 4 starts*/
+        #mp4{
+            background-color: rgb(29, 41, 58);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        #mp4 a{
+            text-decoration: none;
+            font-size: larger;
+            color: white;
+        }
+        
+        .home::before{
+            content:"🏠 ";
+        }
+
+        .about::before{
+            content:"👤 ";
+        }
+
+        .services::before{
+            content:"⚙️ ";
+        }
+
+        .extlink::before{
+            content: "🔗 ";
+        }
+
+        .contact::before{
+            content:"📞 ";
+        }
+        #mp4 a:hover{
+            color: #0aef5a;
+        }
+        /*Mini Projects 4 ends*/
+        /*Mini Projects 5 starts*/
+        #mp5{
+            background:#f4f4f4;
+            padding:40px;
+            margin: 0;
+        }
+        #mp5 h1{
+            text-align: center;
+        }
+        #mp5 table{
+            width:100%;
+            border-collapse:collapse;
+            background:#fff;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+        #mp5 th,#mp5 td{
+            padding:10px;
+            border:1px solid #ddd;
+        }
+        #mp5 th{
+            background:#007BFF;
+            color:white;
+        }
+        #mp5 tr:nth-child(even){
+            background:#f9f9f9;
+        }
+
+        #mp5 tr:nth-child(odd){
+            background:#ffffff;
+        }
+        #mp5 tr:nth-child(5){
+            font-weight: bold;
+        }
+        .best{
+            background:#9ae6ab !important;
+            font-weight:bold;
+        }
+        .yes {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .no {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            #mp5 table, #mp5 thead, #mp5 tbody, #mp5 tr, #mp5 th, #mp5 td {
+                display: block;
+            }
+
+            #mp5 thead {
+                display: none;   /* Hide the table header */
+            }
+
+            #mp5 tr {
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+            }
+
+            #mp5 td {
+                position: relative;
+                padding-left: 50%;
+                text-align: right;                
+                background-color: #d4c3c3;
+            }
+
+            #mp5 td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                font-weight: bold;
+            }
+        }
+        /*Mini Project 5 ends*/
+    </style>
+</head>
+<body>
+    <h1>Mini Project 1</h1>
+    <div id="mp1">
+        <button id="button1" 
+                style="border: 2px;border-radius: 3px; background-color: blue;color: white;padding: 30px 50px;">Button 1
+        </button>
+        <button id="button2">Button 2</button>
+        <button class="button3">Button 3</button>
+    </div>
+    <div id="mp2">
+        <h1>Mini Project 2</h1>
+        <h2>Employee Data</h2>
+        <table  border="2">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Alice Johnson</td>
+                <td>Marketing</td>
+                <td>$60,000</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Bob Smith</td>
+                <td>IT</td>
+                <td>$75,000</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Charlie Browm</td>
+                <td>Finance</td>
+                <td>$70,000</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>Diana Prince</td>
+                <td>HR</td>
+                <td>$65,000</td>
+            </tr>
+            <tr>
+                <td>105</td>
+                <td>Edward Wilson</td>
+                <td>Operations</td>
+                <td>$68,000</td>
+            </tr>
+        </table>
+    </div>
+    <h1>Mini Project 3</h1>
+    <div class="mp3">
+        <div class="todo-container">
+            <h2>📝 Daily To-Do List</h2>
+            <ul>
+                <li>
+                    <label>
+                    <input type="checkbox"> <span>Wake up early</span>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                    <input type="checkbox"><span> Exercise for 30 minutes</span>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                    <input type="checkbox"><span> Complete assignments</span>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                    <input type="checkbox"><span> Learn a new topic</span>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                    <input type="checkbox"> <span> Review today's work</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h1>Mini Projects 4</h1>
+    <div id="mp4">
+        <nav>
+            <ul>
+                <li><a href="#" class="home">Home</a></li>
+                <li><a href="#" class="about">About</a></li>
+                <li><a href="#" class="services">Services</a></li>
+                <li><a href="#" class="extlink">External Link</a></li>
+                <li><a href="#" class="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1>Mini Projects 5</h1>
+    <div id="mp5">
+        <h1>Product Plan Comparison</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Feature / Plan</th>
+                <th>Basic</th>
+                <th>Standard</th>
+                <th>Essential</th>
+                <th class="best">Premium</th>
+                <th>Advanced / Ultimate</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-label="Feature / Plan">Covered Devices</td>
+                <td data-label="Basic">1 Device</td>
+                <td data-label="Standard">Up to 3 Devices</td>
+                <td data-label="Essential">Up to 5 Devices</td>
+                <td data-label="Premium" class="best">Unlimited Household Devices</td>
+                <td data-label="Advanced / Ultimate">Unlimited Household Devices</td>
+            </tr>
+            <tr>
+                <td data-label="Feature / Plan">Introductory Price (approx. INR)</td>
+                <td data-label="Basic">₹799 / year</td>
+                <td data-label="Standard">₹900 to ₹1,000 / year</td>
+                <td data-label="Essential">₹1,199 to ₹1,549 / year</td>
+                <td data-label="Premium" class="best">₹1,399 to ₹1,700 / year</td>
+                <td data-label="Advanced / Ultimate">₹2,500+ / year</td>
+            </tr>
+            <tr>
+                <td data-label="Feature / Plan">Platforms Supported</td>
+                <td data-label="Basic">Windows, Mac, iOS, Android</td>
+                <td data-label="Standard">Windows, Mac, iOS, Android</td>
+                <td data-label="Essential">Windows, Mac, iOS, Android</td>
+                <td data-label="Premium" class="best">Windows, Mac, iOS, Android</td>
+                <td data-label="Advanced / Ultimate">Windows, Mac, iOS, Android</td>
+            </tr>
+            <tr>
+                <td data-label="Feature / Plan">Award-Winning Antivirus</td>
+                <td data-label="Basic"><span class="yes">&#10004;</span></td>  <!-- &#10004; equals to ✔ symbol -->
+                <td data-label="Standard"><span class="yes">&#10004;</span></td>
+                <td data-label="Essential"><span class="yes">&#10004;</span></td>
+                <td data-label="Premium" class="best"><span class="yes">&#10004;</span></td>
+                <td data-label="Advanced / Ultimate"><span class="yes">&#10004;</span></td>
+            </tr>
+            <tr>
+                <td colspan="6">Support & Security</td>
+            </tr>
+            <tr>
+                <td data-label="Feature / Plan">Secure VPN</td>
+                <td data-label="Basic"><span class="yes">&#10004;</span></td>
+                <td data-label="Standard"><span class="yes">&#10004;</span></td>
+                <td data-label="Essential"><span class="yes">&#10004;</span></td>
+                <td data-label="Premium" class="best"><span class="yes">&#10004;</span></td>
+                <td data-label="Advanced / Ultimate"><span class="yes">&#10004;</span></td>
+            </tr>
+            <tr>
+                <td data-label="Feature / Plan">Password Manager</td>
+                <td data-label="Basic"><span class="yes">&#10004;</span></td>
+                <td data-label="Standard"><span class="yes">&#10004;</span></td>
+                <td data-label="Essential"><span class="yes">&#10004;</span></td>
+                <td data-label="Premium" class="best"><span class="yes">&#10004;</span></td>
+                <td data-label="Advanced / Ultimate"><span class="yes">&#10004;</span></td>
+            </tr>
+            <tr>
+                <td data-label="Feature / Plan">Advanced Firewall</td>
+                <td data-label="Basic"><span class="yes">&#10004;</span></td>
+                <td data-label="Standard"><span class="yes">&#10004;</span></td>
+                <td data-label="Essential"><span class="yes">&#10004;</span></td>
+                <td data-label="Premium" class="best"><span class="yes">&#10004;</span></td>
+                <td data-label="Advanced / Ultimate"><span class="yes">&#10004;</span></td>
+            </tr>
+            <tr>
+                <td data-label="Feature / Plan">Scam Detector (AI Scam Blocker)</td>
+                <td data-label="Basic"><span class="yes">&#10004;</span></td>
+                <td data-label="Standard"><span class="yes">&#10004;</span></td>
+                <td data-label="Essential"><span class="yes">&#10004;</span></td>
+                <td data-label="Premium" class="best"><span class="yes">&#10004;</span></td>
+                <td data-label="Advanced / Ultimate"><span class="yes">&#10004;</span></td>
+            </tr>
+            <tr>
+                <td data-label="Feature / Plan">Identity Monitoring & Alerts</td>
+                <td data-label="Basic"><span class="no">&#10008;</span></td> <!-- &#10008; equals to ✗ symbol -->
+                <td data-label="Standard"><span class="yes">&#10004;</span></td>
+                <td data-label="Essential"><span class="yes">&#10004;</span></td>
+                <td data-label="Premium" class="best"><span class="yes">&#10004;</span></td>
+                <td data-label="Advanced / Ultimate"><span class="yes">&#10004;</span></td>
+            </tr>
+            <tr>
+                <td data-label="Feature / Plan">Parental Controls</td>
+                <td data-label="Basic"><span class="no">&#10008;</span></td>
+                <td data-label="Standard"><span class="no">&#10008;</span></td>
+                <td data-label="Essential"><span class="no">&#10008;</span></td>
+                <td data-label="Premium" class="best"><span class="yes">&#10004;</span></td>
+                <td data-label="Advanced / Ultimate"><span class="yes">&#10004;</span></td>
+            </tr>
+            <tr>
+                <td data-label="Feature / Plan">Personal Data Removal</td>
+                <td data-label="Basic"><span class="no">&#10008;</span></td>
+                <td data-label="Standard"><span class="no">&#10008;</span></td>
+                <td data-label="Essential"><span class="no">&#10008;</span></td>
+                <td data-label="Premium" class="best"><span class="no">&#10008;</span></td>
+                <td data-label="Advanced / Ultimate"><span class="yes">&#10004;</span></td>
+            </tr>
+            </tbody>
+            </table>
+    </div>
+    <h1><a href="day1_miniproject_6.html">Mini Projects 6</a></h2>
+    <h1><a href="day1_miniproject_7.html">Mini Projects 7</a></h2>
+    <h1><a href="day1_miniproject_8.html">Mini Projects 8</a></h2>
+</body>
+</html>

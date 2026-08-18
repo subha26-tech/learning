@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Navigation Bar</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Playfair Display', cursive;
+        } 
+        html,body{
+            height: 100%;
+            margin:0;
+        }
+        body{
+            min-height: 100vh;
+            background: url("https://images.unsplash.com/photo-1533135404995-a618910b7b6f?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdW50YWluJTIwYWR2ZW50dXJlfGVufDB8fDB8fHww");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }       
+        nav{
+            background-color: #013b54;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 15px 80px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }   
+        h1{
+            font-size: 2rem;
+            font-style: italic;
+        }     
+        .home::before{
+            content:"🏠 ";
+        }
+        .about::before{
+            content:"👤 ";
+        }
+        .services::before{
+            content:"⚙️ ";
+        }
+        .extlink::before{
+            content: "🔗 ";
+        }
+        .contact::before{
+            content:"📞 ";
+        }
+        nav a:hover{
+            color: #e8c606;
+            transform: scale(1.1);
+        }
+        .logo {
+            font-family: 'Lobster', cursive;
+            font-size: 60px;
+            color: #e8c606;
+            text-align: left !important;
+            text-shadow:
+                3px 3px 0 #222,
+                5px 5px 10px rgba(0, 0, 0, 0.35);
+        }
+        button{
+            background-color: #e8c606;
+            border: 1px solid #e8c606;
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 5px 30px;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <nav>
+            <div class="logo">Adventure</div>
+            <div class="nav-links">
+                <a href="#" class="home">Home</a>
+                <a href="#" class="about">About</a>
+                <a href="#" class="services">Services</a>
+                <a href="#" class="extlink">Gallery</a>
+                <a href="#" class="contact">Contact</a>
+            </div>
+            <button type="button">Login</button>
+        </nav>
+    </header>
+</body>
+</html>

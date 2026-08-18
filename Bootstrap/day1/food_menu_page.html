@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu Page</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .menu-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <img src="https://i.pinimg.com/474x/4c/d7/5f/4cd75f3fb75dbb74f2f70fde2962d8b6.jpg" alt="Logo" 
+                   class="rounded-circle" style="display: inline-block; width: 150px; height:70px;">
+            <!-- <a class="navbar-brand fw-bold fst-italic" href="#" style="color: #a64402;">SK Cafe & Restaurant</a> -->
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Page Title -->
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold fst-italic">Dive Into Our Delicious Dishes</h1>
+            <p class="text-muted">Explore our delicious selection of freshly prepared meals</p>
+        </div>
+
+        <!-- Food Menu Grid -->
+        <div class="row g-4">
+            
+            <!-- Item 1 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card menu-card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Classic Cheeseburger">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Classic Cheeseburger</h5>
+                        <p class="card-text text-muted small">Juicy beef patty with melted cheddar, lettuce, tomato, and our signature sauce.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fs-5 fw-bold text-success">$8.99</span>
+                            <button class="btn btn-outline-primary btn-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card menu-card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Pepperoni Pizza">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Pepperoni Pizza</h5>
+                        <p class="card-text text-muted small">Loaded with spicy pepperoni, mozzarella cheese, and rich tomato herb sauce.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fs-5 fw-bold text-success">$12.49</span>
+                            <button class="btn btn-outline-primary btn-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card menu-card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Creamy Pasta">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Creamy Alfredo Pasta</h5>
+                        <p class="card-text text-muted small">Fettuccine tossed in a rich, velvety parmesan cream sauce with herbs.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fs-5 fw-bold text-success">$10.99</span>
+                            <button class="btn btn-outline-primary btn-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card menu-card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Fresh Garden Salad">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Fresh Garden Salad</h5>
+                        <p class="card-text text-muted small">Crisp mixed greens, cherry tomatoes, cucumbers, and olives with vinaigrette.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fs-5 fw-bold text-success">$6.99</span>
+                            <button class="btn btn-outline-primary btn-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card menu-card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="BBQ Chicken Wings">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">BBQ Chicken Wings</h5>
+                        <p class="card-text text-muted small">Crispy chicken wings glazed in a smoky, sweet barbecue sauce.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fs-5 fw-bold text-success">$9.49</span>
+                            <button class="btn btn-outline-primary btn-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card menu-card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Chocolate Lava Cake">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Chocolate Lava Cake</h5>
+                        <p class="card-text text-muted small">Warm chocolate cake with a gooey, molten chocolate center served with vanilla ice cream.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                            <span class="fs-5 fw-bold text-success">$5.99</span>
+                            <button class="btn btn-outline-primary btn-sm">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0 small">&copy; 2026 SK Restaurant. All rights reserved.</p>
+    </footer>
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

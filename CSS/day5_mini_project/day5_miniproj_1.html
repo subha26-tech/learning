@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Navigation</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+        html{
+            scroll-behavior:smooth;
+        }
+        nav{
+            background:#333;
+            padding:15px;
+            position:fixed;
+            width:100%;
+            top:0;
+        }
+        nav ul{
+            display:flex;
+            justify-content:center;
+            list-style:none;
+        }
+        nav ul li{
+            margin:0 20px;
+        }
+        nav ul li a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+        }
+        section{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:40px;
+            color:white;
+        }
+        #home{
+            background:#3498db;
+        }
+        #about{
+            background:#464fd7;
+        }
+        #services{
+            background:#bc76d8;
+        }
+        #contact{
+            background:#8a09a7;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1>Home</h1>
+    </section>
+    <section id="about">
+        <h1>About</h1>
+    </section>
+    <section id="services">
+        <h1>Services</h1>
+    </section>
+    <section id="contact">
+        <h1>Contact</h1>
+    </section>
+</body>
+</html>

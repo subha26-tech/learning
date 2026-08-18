@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            font-family:Verdana, sans-serif;
+            background:linear-gradient(100deg,#a1cdea,#e2e5ef);
+            padding:50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            color: #555555;
+            margin-bottom: 50px;
+        }
+        .container{
+            width:80%;
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap:25px;
+        }
+        .card{
+            background:#fff;
+            border-radius:15px;
+            padding:30px;
+            text-align:center;
+            box-shadow: 5px 5px 10px #045acc;
+        }
+        .card:hover{
+            box-shadow: 0px 0px 15px cyan;
+        }
+        h2{
+            color:#206bcd;
+            margin-bottom:35px;
+        }
+        .price{
+            font-size:4vmin; 
+            color:#222222;
+            font-weight:bold;
+            margin-bottom:20px;
+            text-shadow: 2px 2px 5px rgb(118, 96, 96);
+        }
+        ul{
+            list-style:none;
+            margin-bottom: 30px;
+        }
+        ul li{
+            font-size:1.2rem;  
+            padding:15px;
+            border-bottom: 1px solid #898787;
+            color:#555555;
+        }
+        .btn{
+            margin-top:20px;
+            padding:10px 25px;
+            border:none;
+            border-radius:20px;
+            background:#206bcd;
+            color:white;
+            cursor:pointer;
+            font-size:16px;
+            transition:0.2s;
+        }
+        .btn:hover{
+            transform: scale(1.1);
+            font-weight: bolder;
+            color:#060606;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pricing Plans</h1>
+    <div class="container">
+        <div class="card">
+            <h2>Basic</h2>
+            <div class="price">&#8377;199 / Month</div>
+            <ul>
+                <li>✔ 5 GB Storage</li>
+                <li>✔ Email Support</li>
+                <li>✔ 1 User</li>
+            </ul>
+            <button class="btn">Choose Plan</button>
+        </div>
+        <div class="card">
+            <h2>Standard</h2>
+            <div class="price">&#8377;599 / Month</div>
+            <ul>
+                <li>✔ 50 GB Storage</li>
+                <li>✔ Priority Support</li>
+                <li>✔ 5 Users</li>
+            </ul>
+            <button class="btn">Choose Plan</button>
+        </div>
+        <div class="card">
+            <h2>Premium</h2>
+            <div class="price">&#8377;999 / Month</div>
+            <ul>
+                <li>✔ Unlimited Storage</li>
+                <li>✔ 24/7 Support</li>
+                <li>✔ Unlimited Users</li>
+            </ul>
+            <button class="btn">Choose Plan</button>
+        </div>
+    </div>
+</body>
+</html>

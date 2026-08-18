@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Festival Invitation</title>
+</head>
+<body>
+    <header>
+        <h1>You are Invited to Our Community Festival!</h1>
+        <p><strong>We are excited to celebrate together. Please RSVP and choose your activities below:</strong></p>
+    </header>
+
+    <form>
+        <label for="guestName">Full Name:</label>
+        <input type="text" id="guestName" name="guestName" placeholder="Enter your name" required>
+        <br><br>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+        <label for="attendance">Will you attend?</label>
+        <select id="attendance" name="attendance" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="yes">Yes, I will be there</option>
+            <option value="no">Sorry, I cannot attend</option>
+        </select>
+        <br><br>
+        <p>Activities you would like to join:</p>
+        <input type="checkbox" id="dance" name="activities" value="dance">
+        <label for="dance">Dance Competition</label><br>
+        <input type="checkbox" id="games" name="activities" value="games">
+        <label for="games">Fun Games</label><br>
+        <input type="checkbox" id="photobooth" name="activities" value="photobooth">
+        <label for="photobooth">Photo Booth</label><br>
+        <input type="checkbox" id="food" name="activities" value="food">
+        <label for="food">Food Stalls</label>
+        <br><br>
+        <button type="submit">Submit RSVP</button>
+    </form>
+</body>
+</html>

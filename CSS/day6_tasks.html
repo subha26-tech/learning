@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Tasks</title>
+    <style>
+        /* Task 7 */
+         * {
+            box-sizing: border-box; 
+        } 
+        /* Task 1 */
+        .content-box{
+            box-sizing: content-box;
+            border: 2px solid black;
+            background-color: blueviolet;
+            padding: 20px;
+            width: 500px;
+            color: white;
+        }
+        /* Task 2 */
+        .border-box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            background-color: brown;
+            padding: 20px;
+            width:500px;
+            color: white;
+        }
+        /* Task 3 */
+        .section-1{
+            background-color: aquamarine;
+            width: 400px;
+            height: 100px;
+            margin:auto;
+            border: 5px solid yellow; /* Task 10*/
+        }
+        /* Task 4 & 21 */
+        .btn-1{
+            padding: 10px 15px;
+        }
+        /* Task 5 & 22 */
+        .article{
+            margin: 10px 15px;
+            margin-bottom: 20px;
+            background-color: aqua;
+        }
+        /* Task 6 */
+        .footer-border{
+            border: 10px solid lightseagreen;
+            background-color: brown;
+            padding: 20px;
+        }
+        /* Task 8 */
+        .t8-div{
+            background-color: lightsalmon;
+            padding: 30px;
+            margin-bottom: 10px;
+        }
+        /* Task 11 */
+        .t11-div{
+            box-sizing: border-box;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+        .t11-box-1{            
+            background-color: rgb(248, 167, 69);            
+            padding: 20px;
+        }
+        .t11-box-2{
+            background-color: rgb(220, 127, 12);
+            padding: 40px;
+        }
+        /* Task 14 */
+        .t14-int-ext{
+            width: 500px;
+            background-color: chocolate;
+            margin: 30px;
+            padding: 20px;
+            outline: 2px dashed blue;
+            outline-offset: 30px; 
+        }
+        /* Task 15 */
+        nav{
+            border: 2px solid black;
+            padding:40px;
+            margin-bottom: 10px;
+        }
+        /* Task 16 */
+        .container-img{
+            border: 2px dashed brown;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+        /* Task 17 */
+        .t17-p{
+            padding-left: 40px;
+        }
+        /* Task 19 */
+        .parent{
+            box-sizing: border-box;
+            display: flex;
+            gap: 10px;
+            border: 1px solid blue;
+        }
+        .box{
+            flex: 1;
+            padding: 25px;
+            background-color: bisque;
+            text-align: center;
+        }
+        /* Task 23 */
+        .quote{
+            border: 2px solid blue;
+            padding: 20px 30px;
+        }
+        /* Task 20 */
+        .section-2{
+            margin-top: 80px;
+        }
+        /* Task 13 */
+        .flexbox {
+            height: 200px;
+            background: #3498db;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        /* Task 20 */
+        .section-2 {
+            margin-top: 100px;
+            background-color: whitesmoke;
+        }
+        /* Task 9, 12, 25 */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            width: 90%;
+            max-width: 350px;
+            padding: 20px;
+            border: 3px solid #3498db;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 10px 15px 15px rgba(89, 4, 209, 0.2);
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+        /* Task 24 */
+        .grid {
+            background-color: lightcyan;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            padding: 30px;
+        }
+        .item {
+            width: 200px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        /* Task 26 */
+        .center-box {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ddd;
+        }
+        .center-box div {
+            width: 200px;
+            padding: 30px;
+            background: #e67e22;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="flexbox" title="Task 13">
+        <h1>CSS Box Model Practice</h1>
+    </header>
+    <nav title="Task 15">
+        <a href="#">About Us</a>
+        <a href="#">News</a>
+        <a href="#">Contact Us</a>
+    </nav>
+    <!-- Task 1 -->
+    <div class="content-box" title="Task 1 & 18">
+         <h2>The content box width and height apply only to the content. Padding and border increase the element's overall size.</h2>
+         <p>The content width is 500px, but adding 20px padding on both sides increases the element's total rendered width is 544px.</p>
+    </div>
+    <br>
+    <!-- Task 2 -->
+    <div class="border-box" title="Task2">
+        <h2>The border box width and height include the content, padding, and border, making layout sizing more predictable.</h2>
+    </div>
+    <!-- Task 3, 10 & 17 -->
+    <section class="section-1" title="Task 3, 10 & 17">
+        <p>Margin property set as auto.</p>
+        <p class="t17-p" title="Task 17">Indentation created from left edge.</p>
+    </section>
+    <!-- Task 4 & 21 -->
+    <button class="btn-1" title="Task 4 & 21">Click Me</button>
+    <!-- Task 5 & 22-->
+    <article class="article" title="Task 5 & 22">
+        Article 1
+    </article>
+    <article class="article" title="Task 5 & 22">
+        Article 2
+    </article>
+    <!-- Task 8-->
+    <div class="t8-div" title="Task 8">
+        <h2>Content Area</h2>
+        <p>This div has 30 pixel for internal space and background color as light salmon. </p>
+    </div>
+    <!-- Task 11 -->
+    <div class="t11-div t11-box-1" title="Task 11">This div has padding 20px.</div>
+    <div class="t11-div t11-box-2" title="Task 11">This div has padding 30px.</div>
+    <br>
+    <!-- Task 14 -->
+    <div class="t14-int-ext" title="Task 14">
+        <h2>For internal Spacing 20px padding used and External spacing 30px margin used.</h2>
+    </div>
+    <br>
+    <!-- Task 16 -->
+    <div class="container-img" title="Task 16">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuQe-zMs2ozJ1PVBNBBcGObzvSo796CUOmCd-oEFH1Xg&s=10" alt="image">
+    </div>
+    <br>
+    <!-- Task 19 -->
+    <div class="parent" title="Task 19">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+    </div>
+    <br>
+    <!-- Task 23 -->
+    <blockquote class="quote">
+        "This is an emphasized quote with a colored border and extra padding."
+    </blockquote>
+    <!-- Task 20 -->
+    <section class="section-2" title="Task 20">
+        <h2>Responsive Cards</h2>
+        <!-- Task 9, 12, 25 -->
+        <div class="card-container" title="Task 9, 12, 25 ">
+            <div class="card">
+                <h3>Card One</h3>
+                <p>
+                    This card uses padding, border, margin,
+                    box-shadow and border-radius and box-sizing: border-box.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Card Two</h3>
+                <p>
+                    This card uses padding, border, margin,
+                    box-shadow and border-radius and box-sizing: border-box.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Task 24 -->
+    <h2 style="text-align:center;">Flexbox Grid Layout</h2>
+    <div class="grid">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+
+    <!-- Task 26 -->
+    <div class="center-box">
+        <div>
+            Centered Box
+        </div>
+    </div>
+    <!-- Task 6 -->
+     <footer class="footer-border" title="Task 6">
+        &copy; 2026 My Website. All Rights Reserved.
+     </footer>
+</body>
+</html>

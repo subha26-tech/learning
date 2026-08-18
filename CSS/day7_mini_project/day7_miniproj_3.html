@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;       
+            gap: 20px;             
+            justify-content: center; 
+            align-items: center;
+        }
+        .gallery img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>My Image Gallery</h1>
+    <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_AToL0j8s49dxxm19ZJthiWoS9gn2_iDHNXq8Mlvp-w&s=10" alt="Gallery Image 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBB4LQTn0vRq4ydPLp-uTj_lEUHOHYWUU18JlCq5KuMw&s=10" alt="Gallery Image 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWONeKwR6BsU4HirtIrmJqw06rA6BaJM-iYmhQniRfHw&s=10" alt="Gallery Image 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mEA3GpqR5mO8AokCUildkkgXgdru16Br1oVsptaKcA&s=10" alt="Gallery Image 4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0tuZAPwtpMShSFaknL7OEAEINzhrnb2YAlcNlDjXvPg&s=10" alt="Gallery Image 5">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD41CBCsrS6FlZS6MW0Bn1ePrsfEbkeCMF_qSDGNmaGA&s=10" alt="Gallery Image 6">        
+    </div>
+</body>
+</html>

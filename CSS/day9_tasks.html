@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 Tasks</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:20px;
+            background:#f4f4f4;
+        }
+        .main-div{
+            background:white;
+            padding:15px;
+            margin-bottom:25px;
+            border-radius:8px;
+        }
+        .container{
+            border:2px solid black;
+            padding:10px;
+        }
+        .box{
+            background:steelblue;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+        /* Task 1 to 4 */
+        .task-1-4{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 200px auto;
+            gap: 10px;
+        }
+        /* Task 5 */
+        .task-5{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap:5px;
+        }
+        /* Task 6 */
+        @media (max-width: 768px){
+            .task-5{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        /* Task 7 */
+        .task-7{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:5px;
+        }
+        /* Task 8 */
+        .task-8 img{
+            width:100%; 
+            height: 350px;
+            transition: transform 0.1s ease;
+        }
+        .task-8{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);/* Task 9 */
+            grid-template-rows:auto;
+            gap: 10px;
+        }
+        /* Task 11 */
+        .task-8 img:hover{
+            transform: scale(1.05);
+        }
+        /* Task 12 */
+        /* Mobile */
+        @media (max-width:768px){
+            .task-8{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        /* Tablet */
+        @media (min-width:768px){
+            .task-8{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        /* Desktop */
+        @media (min-width:1024px){
+            .task-8{
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        /* Task 10 */
+        .task-10{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: 150px 300px 100px;
+            gap:5px;
+            border: 4px solid steelblue;
+        }
+        /* Task 14 & 15 */
+        .task-14_15{
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-template-rows: 100px 200px 50px 60px;
+            gap: 2px;
+        }
+        .spancol{
+            grid-column: span 2;
+        }
+        .spanrow{
+            grid-row: span 2;
+        }
+        /* Task 16 */
+        .task-16{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:1px;
+        }
+        .colstart{
+            grid-column-start: 2;
+        }
+        /* Task 17 */
+        .task-17{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            /* grid-template-rows: 100px auto; */
+            gap: 1px;
+        }
+        .t17-header{
+            grid-column: 1/3;
+            grid-row: 1;
+        }
+        .t17-side{
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .t17-main{
+            grid-column: 2;
+            grid-row: 2;
+        }
+        /* Task 18 */
+        .task-18{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 5px;
+        }
+        /* Task 19 */
+        .task-19{
+            display: grid;
+            place-items: center;
+            width: 350px;
+            height: 300px;
+            gap: 10px;
+            border: 2px solid darkblue;
+        }
+        /* Task 20 & 25 */
+        .task-20_25{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Task 25*/
+            grid-auto-rows: 150px; /* Task 20*/
+            gap:5px;
+        }
+        /* Task 21 */
+        .task-21{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            height: 300px;
+        }
+        .as-end{
+            align-self: end;
+        }
+        /* Task 22 */
+        .task-22{
+            justify-self: start;
+        }
+        /* Task 23 & 24 */
+        .task-23_24{
+            display: grid;
+            grid-template-areas: "header header" "sidebar content";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 100px auto;
+            min-height: 100vh;
+        }
+        .header{
+            grid-area: header;
+            background: rgb(29, 69, 85);
+        }
+        .aside{
+            grid-area: sidebar;
+            background-color: rgb(115, 179, 219);
+        }
+        .main{
+            grid-area: content;
+            background-color: rgb(109, 154, 181);
+        }
+        /* Task 26 */
+        .task-26{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+            height: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <h2>1. display:grid, 2. grid-template-columns: repeat(3, 1fr), 3. grid-template-rows: 100px 200px auto, 4. gap: 10px</h2>
+        <div class="container task-1-4">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+            <div class="box">Box 6</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>5. grid-template-columns: 2fr 1fr 1fr, 6. Media queries</h2>
+        <div class="container task-5">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>7. Grid of six cards with a uniform layout</h2>
+        <div class="container task-7">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+            <div class="box">Box 4</div>
+            <div class="box">Box 5</div>
+            <div class="box">Box 6</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>8. Photo gallery using grid-template-rows and grid-template-columns, 9. grid column sizes dynamically using fr units,<br>
+            11. hover effect to grid items in a gallery, 12. Media queries to adjust a grid layout for mobile, tablet, and desktop views</h2>
+        <div class="container task-8">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_AToL0j8s49dxxm19ZJthiWoS9gn2_iDHNXq8Mlvp-w&s=10" alt="Gallery Image 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBB4LQTn0vRq4ydPLp-uTj_lEUHOHYWUU18JlCq5KuMw&s=10" alt="Gallery Image 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWONeKwR6BsU4HirtIrmJqw06rA6BaJM-iYmhQniRfHw&s=10" alt="Gallery Image 3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mEA3GpqR5mO8AokCUildkkgXgdru16Br1oVsptaKcA&s=10" alt="Gallery Image 4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0tuZAPwtpMShSFaknL7OEAEINzhrnb2YAlcNlDjXvPg&s=10" alt="Gallery Image 5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD41CBCsrS6FlZS6MW0Bn1ePrsfEbkeCMF_qSDGNmaGA&s=10" alt="Gallery Image 6">
+        </div>
+    </div>
+     <div class="main-div">
+        <h2>10. Different row heights for header, content, and footer using grid-template-rows.<br>
+        13. Combine gap and border for separated grid items.</h2>
+        <div class="container task-10">
+            <header class="box"><h1>Header</h1></header>
+            <main class="box"><h1>Content</h1></main>
+            <footer class="box"><h1>Footer</h1></footer>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>14. grid-column: span 2, 15. grid-row: span 2</h2>
+        <div class="container task-14_15">
+            <div class="box spancol">Header</div>
+            <div class="box spanrow">Side Menu</div>
+            <div class="box">Main Content</div>
+            <div class="box">Testimonials</div>
+            <div class="box spancol">Footer</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>16. grid-column-start: 2</h2>
+        <div class="container task-16">
+            <div class="box colstart">box 1</div>
+            <div class="box">box 2</div>
+            <div class="box">box 3</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>17. Position a grid item in a specific cell using grid-row and grid-column.</h2>
+        <div class="container task-17">
+            <div class="box t17-header">Header</div>
+            <div class="box t17-main">Main Content</div>
+            <div class="box t17-side">Side Menu</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>18. Layout with auto-fill and minmax() for responsive columns.</h2>
+        <div class="container task-18">
+            <div class="box">box 1</div>
+            <div class="box">box 2</div>
+            <div class="box">box 3</div>
+            <div class="box">box 4</div>
+            <div class="box">box 5</div>
+            <div class="box">box 6</div>
+            <div class="box">box 7</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>19. Place-items: center to center all items inside a grid both vertically and horizontally.</h2>
+        <div class="container task-19">
+            <div class="box">box 1</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>20. grid-auto-rows to set default row height for dynamic content.<br>
+        25. repeat(auto-fit, minmax(150px, 1fr)) to make a fully responsive card grid.</h2>
+        <div class="container task-20_25">
+            <div class="box">box 1</div>
+            <div class="box">box 2</div>
+            <div class="box">box 3</div>
+            <div class="box">box 4</div>
+            <div class="box">box 5</div>
+            <div class="box">box 6</div>
+            <div class="box">box 7</div>
+            <div class="box">box 8</div>
+            <div class="box">box 9</div>
+            <div class="box">box 10</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>21. align-self: end 22. justify-self: start</h2>
+        <div class="container task-21">
+            <div class="box task-22">justify-self:start</div>
+            <div class="box ">box 2</div>
+            <div class="box as-end">align-self:end</div>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>23. Dashboard layout using named grid areas (like header, sidebar, content).<br>
+        24. Use grid-template-areas to define a layout and assign elements to those areas.</h2>
+        <div class="container task-23_24">
+            <header class="box header">Header</header>
+            <aside class="box aside">Sidebar</aside>
+            <main class="box main">Content</main>
+        </div>
+    </div>
+    <div class="main-div">
+        <h2>26. Asymmetric layout with grid-template-columns: 2fr 1fr for a main-content/sidebar structure.</h2>
+        <div class="container task-26">
+            <main class="box">Main Content</main>
+            <aside class="box">Side Bar</aside>
+        </div>
+    </div>
+</body>
+</html>

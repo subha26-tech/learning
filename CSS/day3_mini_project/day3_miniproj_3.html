@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card Design</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+             font-family: Arial, sans-serif;
+            background-color: lightgray;
+            display: flex;            
+            flex-direction: column;            
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container{
+            width: 30%;
+            background-color: white;
+        }
+        .card{
+            background-color: white;
+            margin: 20px;            
+        }
+        .card img{
+            width: 100%;
+        }
+        .prod-name{
+            font-size: 3vmin;
+            font-weight: bold;
+        }
+        .prod-price{
+            font-size: 2.5vmax;
+            color: green;
+        }
+        .buy-btn {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyw585mnWiOlaW4KoOb0mYtOvgRnzryNoj6CZdNcdbpA&s=10" alt="Product Image">
+            <p class="prod-name">Wirless Headphones</p>
+            <p class="prod-price">&#36;99.99</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City General Hospital | Advanced Healthcare & Medical Services</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Top Bar -->
+    <div class="bg-primary text-white py-1 px-3 d-none d-md-block small">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <span class="me-3"><i class="bi bi-geo-alt-fill me-1"></i> 123 Healthcare Ave, Medical District</span>
+                <span><i class="bi bi-clock-fill me-1"></i> Open 24/7 for Emergencies</span>
+            </div>
+            <div>
+                <span class="me-3"><i class="bi bi-envelope-fill me-1"></i> support@cityhospital.com</span>
+                <span><i class="bi bi-telephone-inbound-fill me-1"></i> +91 2233 7878-CARE</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 text-danger fst-italic" href="#">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBEQACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQQFBgcDAgj/xABEEAABAwMBBAUJBQUHBQEAAAABAgMEAAURBhIhMUETIlFhgQcVVXGRk6HB0RQjQlKxMjNicoIkQ0WSorLwU2PC0uEW/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAQFAgMGAQf/xAA5EQACAgECBQEFBgQFBQAAAAAAAQIDEQQhBRITMVFBImFxkaEyUoGxwdEUM+HwBhVCYvEjNESCkv/aAAwDAQACEQMRAD8A3Dj6qAWgCgENAHAUAxfvFujv9A/PjNu/kU4Aa2KmxrKi8Gp31RfK5LI9SoKQFJUCCMgg8a1m1NPsHGgPVAFAIaABu40A0fucKO70T0thDn5VLANaZ6iqDxKSTMXKK7sdJWlaQpCgpJGQRzrammsoyFxmvQLQBQCGgAUAtAFAFAFAQer5r0GyPORzsuKKUBQ/Dk7z7M1J0lcbLUpdiFxC6VVDcO+xkkjBJJHfV+c5Eu/ktuDzqZlvcWVtsBLjeT+znII9W6qriNcYtTXqXnDLJNOD7I0CqwtBFKCUlSjgAZJoDlEkszI7ciM4HGXEhSFjgoHnQynCUJOMlho7UMSJ1TNdt9ilSGNzoSEpP5STjPxqNq7HXTKS7mM3iJmEYlSyok5JySTnfXF2vmeWQJF40TJc2nYpJLeztAdh51dcDvm5TrfbubtNJ5cS210ZLCgCgCgCgCgCgCgCgGd1gM3K3uxHyQhwDrDiCDkH21sqsdc1OJpvpjdW4S9TOLjoy5sLP3kXoc/vlu7Ax3g1bw11cl2eSklw62D7rHnsT2lVWLTcVxDl4iOynlAurC9wxwSO4VD1Mb75ZUHgn6aen08cOxZLLFvdrlqCY1xiuE/hS6M1ElTZHvFk2F9U/syTO9xVsW+Uv8rKz8DWtEmpZsiveiD8nLxf0db1KO9IWj/KtQHwxWU1iTJ/GI8uus/B/RE7KmxoozJktNfzrArVOyEN5PBVuSXcjJ90sk+I7DensKbdSUqwv51Et1Wlsg4SmtzBzg9myoM6Zkqd2YEmLLb5LS6AfEVRS4ZOx/8ARkpL4kd1N9i5afs4tbSi4sLfcA2iOAHYKuOHcPWkTbeZM3VVci37kxVmbgoAoAoAoBM0AtAFAFAVrVWoxaB0EYByWsZweDY7T8hUzS6V3PMuxXa7WrT+zHeT+hQgxdNQSSpKXZj34lE9VPt3CrVyq08d9iljG7UyzvJ/3+BJJ0Hd3BlS4iO4uE/oKjviFK9GTI8Nu8o8P6AuiWjgsurxuw5u9W8UXEKsmf8Al1qQ2RF1fZIryQxJ+yFtSXEKUlxGzjedx6u7sxWN09LbFvO5K4bXqq9VXHG3Ms+MZO1n8/ptyrXaUOmO04dtbWEnKgFYJ5cfjXL8ReqlJRqWzR0fHHKeoU4+q/VocMaQvTp2nmkIUebroJ+Gaqf8r1M939WUfSmx+dG3AIwlcbOPzH6VlLg9rWzR70JDSVZblbvvXmSEp39I2cgezeKgXaDU6f2mtvKNUq5x3Jmw6icStMeevabO5LquKfX2ip3D+LSUlXf2fr+5nVf6SLeDXTEw9UAUAhNAGM86AMUAtAFAcn3EstLdWcIQkqV6hXqWXg8lJRWWZE6t+7XErUfvpLo48idwHh8q6NKNVePByHNLUWZ9ZM1W3wo9shIjx07DaBvPMnmT31zttjnJykdZTVGqKhEi33ZE2DJuCnHGYbba1stNK2FOhIJypXEZxuAqsnOdlcrW8RSbSXr72/f7i1hGFVsaUk5NpNvdLPol7hrYlyLhCclW911h1p0oDLrynkObgd+1vHHiDWvSSndBzrbTT7N5T+Zv1sa6bFXak013Sw18th3dp6ZWkbjJCS2oRnQts8UKAII9tWVFnVSZH09Lr1sIZzuse9ejG2kgWbrd46k4GxEeT37TISfig1tfZGzX4lTVNf7l8pZ/UtGKxKsMUAhSCCCMg8c141kFC1DARBuKkspw04nbSkcu0e2uM4rpVRf7PZ7lffBRkWnTkpUq2N9IcrbJQT244fCuh4VqHdpk5d1sSqJc0NyWqzNwUAmKAWgCgCgCgGF9z5nm7PHoF/pW2n+ZH4mjU/yZ/BmSpkmHIYfb4pdSUg8zmr2+SUcP12KXhPD7dbObqe8IuXxx6e7Pk1hEhu52lT0NeUvtHYPeR9a5y+uUVKD7nQaa6M+WxdtmVidbJMy3quDEzo46Iw22Mq3FCcKTjhyNUN2mstq6sZ4il239FujoaNVXVaqZQzJy2e3q9mMLHZZlxjOPxZ32dCHdgp2lDfgHO7uNatHpLbouUZ4WSVrNZTRNRnDm29xL3RWdH3+Qn90/0ymz2jGM+JBNXmk3zJdm/wC/mV1O2uog+65c/n9Ow9hp6DVy0ZwHrY3gfyLI/wDKpT7Eax8+j+E39V/QsY4ViV4UAhNeAoeo5qJt0V0SgptoBAI58cn21xvGNQrtR7PaOxAvlzTJvR2fsb+eHS/KrXgH8iXx/Q3absyxVfEkKAKAKAQnFAAOaAWgOMpoPsOsqO5xBQfEYr2MuVqXgxnHmi15MSnMudOmO6NkgKKgeRG751e3JWNKPvf7Ef8Aw5qP8uou1U/SVcfnLMvoiZ0vqhdmdQl0KchvnroA3pPaPhu51H1MI2wi19pmzT8Nvp1GrhH7FWX+qS/9d/8Akv8A9jamtrl2qWhLcpP3iSnbadzuJKcjB7cEVQXaRxnLleG+6xlP8CdRrIyhHmXMl2ecNfieGLI6GTHdkNNRVKytmG0Wws8OsSSeXLFaoaRpcjaUfCWM/mSLNbFy54xbl5k84+iOWuAlnRlxQ0kJAZCEpSOG8ACp8EtkhwvMtdBy8nq54Z1hZV4/fMSWc+oIUB8DXq+yzylOWitXhxf5osGd3GsSAQMXUKX9UyrLsABlkLS5+ZW7aHsUn4161hZJs9G46SOo8vH7fkMNR6hBC4cBeTwcdTy7h9a57iXE8Zqpe/q/2Km61fZiVpvlXMMhl40o30dqSs/3i1K8OHyrsOC18mlT8tk7TrEPiTQq3N4tAFAFAJxoBaAjdR3LzRZJc/YDhZRlKCcBR4AGs6488lE20VdWxQ8kZb9Sv3G3xZkC0SJLbreVlt1sdGsEhSSFEcMV7KvleGyU9FXFuNlqi15T7edkUnUqJHndxx6A7DDgK0ocUkkgnf8AskjiKtNG+b2vCwUnGehp9H/DV2KTnPmeE8JJY9feQJZIC8YG8lHdz/X9K2dBvm+hPf8AiGly0rXrjq+/2eTfztv8iW07qGXZZQKAVxnD94yojHrG/ca16mPUhmUcNepG0Wg0/W5KNXGWe0eWSz9NtjQZeokuW2HJs6WpLkqSlhCHFFIQogk7WMkYAqrlVKEuWRN0FdWqcnJ4UU2/O3oNbvC1Jd4CoL8e2MtOLQVLRJWSAlQUd2x3YrxOKeSdp7dFp7OpFybWfReqa8kjqKBOku26VbEx1SIb5c2X1FIUkoUkjIB7axTI2kuqgpwtziSxt8UzmH9SJBL0S0oQBkqEpZx68oo3Fb5Eo6JLaUvkv3KFeLg4lKFtKSXkSnHX5DSj1wvqkJ/hAx7Kp7NfHUzlp6/VPD8s2V6mGqnPTQ+y4Yj8Vuvnv8xqzLccSVMxFrQCQFBSRnFU9mhqrfLbak/GGQbOHVUtRtuUZYW2HtkcsOzHFpQ3bnCpRwAHE7z7a1x0VE5KMb1l/wC1mr+D0r/8hf8AzIvUO4XSO0zHGnXw2gBBcMlvGOZ4+NdfTUqq4wXoiatNRGG1q+TDS2p2tQzrkyw1stRFpDa85LiTkZ7t6T4YqTZVyJPye6nSOiMW33LHWoiCEZoAG6gFoAoCt+UQZ0dce5KSf8wrbR/MRL0LxqIlb8j08ri3C3rVktrS8gdgUMH/AGj21t1S3UiXxWHtRmvgT+u7YZVsEtpJLsU7W7mg/tfI+FZ6G7ks5X2Zy/E6HZXzrvH8jNlb6uzn0N3htBQPA8axmuaLRM0d70+pruX+mSfye/0O1onuWydFlYK0suhxTZJAUcEe3ed9QZxV8IQ8/odZOv8AgL9fNfZ2x8JyybRbLhHucJqXEXtMuDI7R2g9hFVM4Srlyy7kauyNkVKPYdKOKxMzPdWajM9xcGCvEVJwtY/vT9P1rnOI692Pp1vb8/6EW2zOyK4UBxtSFZwpJBx31UVWuqxWR7p5MabXTbGyPdPJ3htBlhDQOQkYz21jqr3fdKxrue6vUPU3ytksczLTpCCZE0yFjKGOHeo8KsODabnu6r7R/MxohmWfBN6xnm26YuElKsLDRQ3n8yuqP1rsKo800i00tfUujEpPkZH9ru2OAbZA9q6k6t7L+/BZ8WeVD8f0NSqEUoUAUAUAUBBa5b6XSF2TjOIylezf8q2UvFiJGleL4P3mWeTWeIOro6FK6kpC2T2ZO8fFIHjUzURzB+4uNfDnofuNuWApspUAQRgg86rznvQyPU9pVaLmtgJPQL67Ku1PZ4fSug0t3Wrz6+pzGq0/Qt5fT0+H9CEWO2pBoXvGpJ2tnPDJHwqDUsXuPjJ3HE7FZwOGoz7U+nF/GHNn8i1+Ty9Kt93TBeWfssxWACdyHMbj48PZXmup54c67o5rQXdOfI+zLdry8mFBRDjkh6UDlQP7KOfieHtrk+J6l1V8ke7Le2WFhGeIGK5iRFY5a31qayYjuMhTzqGmklS1nZSkczWMa5WSUY92eYbeEaZZ4KbdBbjpwVAZWr8yuddvo9OtPSq1+PxJ8I8kcFI8sVwDNuhQEnrPulxY/hR/9UPZVnpY+05FrwyGZyn4/U5eRlr+z3R/8ziE+wE/OvdU90Z8UftRRpNRSqCgDNAJk5oBaAZ3iP8AarRNjf8AWjuI9qSK9i8NMzrfLNM+c7e+809HkMHDrSkupJO4FJyKtZY3R0tiTTiz6Nt8tqfBYmsqBZfbDiSDyIzVU1h4OZlFxk4sY6mszd6tymklKX0dZlw8j2eo1u097pnn09SHqtMr6+X19DIpDa2HnGnUFDjZ2VIVxBHEV0EWpLKObacW0z2YbIazv2tgK28+Pz7PGo/azmLR6uctFHSP7MZOXzRGFS0FK21FK0HaSR+Ejgak49GQF7i0anuCrjelv56nRthA7OoCfiTXzHisn/FSj42L6UuZ5GLA2t3DHEmqzDZrY6CiRsgYHszWE5eiPGXXR1n6NIuMlPWUPuUkcB+b/nKr7hGi5V1prd9v3JFNf+plryPwkbt1XxIMc8o8pu536R1lBMRHRoOeY3nn2nsqdQnGPxLnRRcK17y1eR5nY03IeP8Aey149QCR+ua06l+2ReIyzb+Be6jkAQmgEA7aA9UAUAihlJB4GgPm26tLg3GZCI2SzIcQrt3KOPCrSLykzooSUoqXuL15Pbt50sM7Sjz/AELzjSxDczxCgSpPrB3+onsqPfHElNEHVw5LFelt6/37yK07q666SnrttzbdditK2Fx1nrs96CeXdwPKsrK42LmibbtPXfFTjs2W69RLdq+F5108+27LQn71n9lShjgpPEK7M8eFZaa+VD5LO39/Q5niPDpt8yXtfmUF0LTlte0Ck4KVZGD6qt9u5QLPYbukBJJ5CvTLsT11jKiXFxhwEKQlsnPehJ+dfMOK/wDdzfvL3GFg5oUdnHLuqtb2wYss2nbM242bldlIYgNdbLqtkLx2k/hqz4bw53SVk1t+f9DbTS5vsMNY+UjqKhacJSnguYU43f8AbB/3Hw7a7CrT43l8i90+h9bPketPTJGjtFS7pcVrM24ubcWO6olROMBRzv8A4j3Ac91ezStsSXZC1R1F6hHsu5mqnXXM7bi1qJySo5yTvJqUWSx6G7+TiIYejrehQwpxKnj/AFqKh8CKr7pZsZR6uXNc2WatRGCgCgCgCgEPCgMn8rWnFsyhfojeWXAEysD9lXALPcRgeAqXp7NuVlnor9um/wADOW3VsuodZWptxB2kLQcFJHMGpJPeHsyzTr/B1JFQjUKTGuTScN3BhvaS4OQdQN/inPq5VqUHB+z28EaFUqn7G68P9CvJckQJXSR5Ow8g9V6O6fgob627M37SW6+ZYIt8YvDyWb+4GJCsJTcUIG88ulSNxH8QwRzyK9rslV9ndeP2KXX8HruzOraRarb5PZ6rgyuc9FMJKgpRaWVFxPHABHOsrOIQ5PZTyUNfD7FP28YLFq/S791ltzIKmw7s7DiFnGQOBBrk9foJXyUodyzsrcnlFIvjkbS6uhkqam3PGfs6SS012FZ3E/yjFZaLgazz3PPuJGl0DtfNPsVG7Xi4XhzbuEp14D9hs7kN9gSkbhiulhCMFiKLuuuFaxFD+0O2e0bMy4J85TE9ZmG3+5QeRcWeP8oz315JSlstkYWc9nsx2Xn9hjfLzOvs8zLg7tLxsoQBhLaexI5V7GKgsI2VQjXHliPNIafd1JeUQwlX2dBC5TnJKOz1ngPHsryyfJHJjdcqoZ9fQ+g2m0NNpbbSEoSMJSOAHZVcUR7oAoAoBCaAWgCgOUhhuQ0tp5CXGlpKVoUMhQPEGgTaeUY7rXyfyrU47OsqFyIO9SmU9Zxn/wBh8R8amV3KW0u5aUapT9mXcoO1tcDmt5Lyes49dMjJ6aR0hPWAAGSaNnjlg1/yR30zrc9aXVlS4OOhUriWjy/pO71YqJfHD5vJW6yvlkpr1LZqq7osVil3FQClNIw2g/iWThI9pFaYR5pJEeqHUmonzwpUm4SXXXFl59xRW4tR4kniTVhsi6yorCObqFsLKHE4V669yObJ4zk0ye5J7S2lrlqSRsw2+jjJOHZTgOwj1fmPcPHFYTsUO5qtvjWt+/g3DT1hhaetyYcBBxnLjit63FdqjUGc3N5ZU2WSslzSJYViawoAoAoBMUAtAFAIaATZFAU3Vvk+tt7K5MPEGereXEJ6jh/iT8xv9dboXOOzJNWplDZ7oyC92C5WKWI90Y6HaOEOje2sdx5+rjUuM4yWxPhbGazEj3HEkBDYwgcM8T3msjMsvkznGDrOAdrDcjbYWM8QoZH+oJrVcswZo1C5q37i3+W64KRDtluQf3zi3l47EgAD2qPsrVp1u2aNHHdyMviSvsy17SNoLGDg4I/586k4Jr3PX9ouktlmMwp15WENttgqUa82SyzzaKy2aVpPyXgdHK1KQo8fsbat39ahx9Q9pqPO/wBIkS3V+kPmacxHZjMIYjNIaaQNlCEJACR2AVG7kJvLyzoBQ8FoAoBDvoAFALQBQBQBQBQBQDafBjXGK5Fmx232HBhSHE5Br1Np5R6m4vKMq1Z5LX45XK04ovNcTEcPXT/Io8fUd/eakwv9JE2vVZ2mZyh6RbpiXdhaJEV0L2FgpKVJOcEceVSO5K+0sehafKpdRcdVuBKvuYzDSE/1JDhP+sDwrVTHETTp48sDzpPQV11DsPupMKAd/TuJ6yx/Cnn6zu9dJ3Rj7xZfGHvZsenNMWvTkct26OA4ofePr6zjnrPyG6os5ufcg2WSsftE0KwNYUAUAUAUAUAUAUAUAhoDyVqH4aA5KecHBomgOS5Tw4MGgOSp0kcIxPjQHJVxmcoZPjQFe1PZIupG/wC3WwokgYRJaVsuJ8eY7jmtkJyj2NldsodiJsOj2oM03C5RDcpmQUl0YbRgYGE5OTgDec91ZStbWEZzvk1yrZF1FxmbswyPGtJHOqbhKPGKR40PTsmY+eMc0B1S+6eLJFAdUuKPFBFAewSeIoBaAKAM0BH+erX6Sh+/T9az6U/DMOpDyL56tfpGJ79P1p05+B1IeQ89Wr0lD9+n606U/DHVh5Dz1a/SUP36frTpT8MdWHkQXm1D/Eofv0/WnSn91jqQ8i+erV6Sh+/T9adKfhjqQ8h56tXpKH79P1p0p+GOpDyJ55tfpKH79P1p05/dY6kPIvnq1ekonv0/WnSn91jqQ8h55tXpKJ79P1p0p+GOpDyHnq1+konv0/WnSn4Y6sPKEF5tXpKH79P1p0p/dY6kPIvnq1ekofv0/WnTn91jqQ8h56tXpKH79P1p05/dY6kPInnm1+konvk/WnTn4Y6kPIvnm1+kYnvk/WnTn4Y6kPIeerX6Rie+T9adOfhjqQ8gb1a+Vxie+T9adOfg86sPInni1D/Eonv0/WnTn4Z71IeTHINljSYcd5a3QpwZVskY/eBPZ2GrmVzUsHPw08JRTO7NkiNrSs7bg+zod2VkYyrA5DvrF3SaMo6eB6//ADkP7StrpX9lIODlOdysdle9eWDz+Ghn/j9iHvMJqBcHIzJUpCQMFeM/Ct1cnKOWaLIKEsIY4HZWZrwgwOygwgwKDCFoMITA7KDCDA7KDCDA7KAMDsoMIMDsoMIMCgwidtFriSobDrzZUtb60E7RG4JyKj2WSjJpMl00wnFNokG9P25TKVFpWSPzmsHfZnGTe9LVy5wNrbZIUlWHELA2Qdyu4fU1lK6aXcwhpq5PdDpOmreXWknpcLVg9fuJrDrzNktHUsFZnsojzHWm87KVEDNSoPmjlldOKjNpH//Z" 
+                alt="City Hospital Logo" class="rounded-circle" style="width: 70px;height: 70px;"></i> City General
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#doctors">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#departments">Departments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="tel:911" class="btn btn-danger text-white fw-bold px-3 py-2 shadow-sm">
+                            <i class="bi bi-telephone-fill me-1"></i> EMERGENCY: 108
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-white py-5 border-bottom mb-5">
+        <div class="container py-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2 fw-semibold rounded-pill">Welcome to City General</span>
+                    <h1 class="display-4 fw-bold text-dark mb-3">Exceptional Healthcare You Can Trust</h1>
+                    <p class="lead text-muted mb-4">Our dedicated team of world-class physicians utilizes cutting-edge technology to provide comprehensive, patient-centered care around the clock.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#doctors" class="btn btn-primary btn-lg shadow-sm">Meet Our Doctors</a>
+                        <a href="#contact" class="btn btn-outline-dark btn-lg">Book Consultation</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=80" alt="Hospital facility" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Departments Quick View Section -->
+    <section id="departments" class="container mb-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark">Our Core Departments</h2>
+            <p class="text-muted">Specialized clinical departments equipped with advanced diagnostic tools.</p>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-0">
+                    <div class="text-primary fs-1 mb-3"><i class="bi bi-heart-pulse"></i></div>
+                    <h4 class="fw-bold">Cardiology</h4>
+                    <p class="text-muted small">Comprehensive care for heart conditions, diagnostics, and preventative procedures.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-0">
+                    <div class="text-primary fs-1 mb-3"><i class="bi bi-activity"></i></div>
+                    <h4 class="fw-bold">Neurology</h4>
+                    <p class="text-muted small">Advanced neurological treatments and expert care for brain and spine health.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-0">
+                    <div class="text-primary fs-1 mb-3"><i class="bi bi-shield-plus"></i></div>
+                    <h4 class="fw-bold">Pediatrics</h4>
+                    <p class="text-muted small">Specialized, gentle medical services focused on infants, children, and teens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="container mb-5 py-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark">Meet Our Expert Doctors</h2>
+            <p class="text-muted">Browse through our panel of professional specialists and book your visit.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Doctor 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNWfNPaLXn4oDflKczFeZj2kufF0xx7gIuGh3CKo2tJg&s=10" class="card-img-top object-fit-top" style="height: 250px;" alt="Dr. Sarah Johnson">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold text-dark mb-1">Dr. Sarah Johnson</h5>
+                        <p class="text-primary fw-semibold mb-2">Cardiologist</p>
+                        <p class="text-muted small mb-4"><i class="bi bi-award me-1"></i> Experience: 12 Years</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary w-50">View Profile</a>
+                            <a href="#" class="btn btn-primary w-50">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgeauzlezvPXYOh0GgCFgqtpBZIZKEWgTMb-wHfDLLCA&s=10" class="card-img-top object-fit-top" style="height: 250px;" alt="Dr. Michael Chen">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold text-dark mb-1">Dr. Michael Chen</h5>
+                        <p class="text-primary fw-semibold mb-2">Neurologist</p>
+                        <p class="text-muted small mb-4"><i class="bi bi-award me-1"></i> Experience: 10 Years</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary w-50">View Profile</a>
+                            <a href="#" class="btn btn-primary w-50">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLoDwf_h7tLlEeskzuuPWXsuvufVUYTE8_P0q5GD6a7w&s=10" class="card-img-top object-fit-top" style="height: 250px;" alt="Dr. Emily Davis">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold text-dark mb-1">Dr. Emily Davis</h5>
+                        <p class="text-primary fw-semibold mb-2">Pediatrician</p>
+                        <p class="text-muted small mb-4"><i class="bi bi-award me-1"></i> Experience: 8 Years</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary w-50">View Profile</a>
+                            <a href="#" class="btn btn-primary w-50">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNm15-t7RWDG0LNdnPbdIy7nU8d4KIGTaE2-TDU5_Fww&s=10" class="card-img-top object-fit-top" style="height: 250px;" alt="Dr. James Wilson">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold text-dark mb-1">Dr. James Wilson</h5>
+                        <p class="text-primary fw-semibold mb-2">Orthopedic Surgeon</p>
+                        <p class="text-muted small mb-4"><i class="bi bi-award me-1"></i> Experience: 15 Years</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary w-50">View Profile</a>
+                            <a href="#" class="btn btn-primary w-50">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmYB0b1iSijJOZicvmVYnpOgU_69IOL97Rh9b49Ls10Q&s=10" class="card-img-top object-fit-top" style="height: 250px;" alt="Dr. Sophia Martinez">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold text-dark mb-1">Dr. Sophia Martinez</h5>
+                        <p class="text-primary fw-semibold mb-2">Dermatologist</p>
+                        <p class="text-muted small mb-4"><i class="bi bi-award me-1"></i> Experience: 7 Years</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary w-50">View Profile</a>
+                            <a href="#" class="btn btn-primary w-50">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doctor 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=500&q=80" class="card-img-top object-fit-cover" style="height: 250px;" alt="Dr. Robert Taylor">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold text-dark mb-1">Dr. Robert Taylor</h5>
+                        <p class="text-primary fw-semibold mb-2">General Physician</p>
+                        <p class="text-muted small mb-4"><i class="bi bi-award me-1"></i> Experience: 14 Years</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary w-50">View Profile</a>
+                            <a href="#" class="btn btn-primary w-50">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="bg-white py-5 ">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                    <h2 class="fw-bold text-dark">Our Healthcare Services</h2>
+                    <p class="text-muted">Ensuring complete well-being through advanced medical treatments.</p>
+                </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-card">
+                        <h4>🚑</h4>
+                        <h5>Emergency Care</h5>
+                        <p>Rapid emergency response units and critical care treatment pathways available 24 hours.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-card">
+                        <h4>🔬</h4>
+                        <h5>Diagnostics & Lab</h5>
+                        <p>Precise laboratory testing and imaging scans using modern technology equipment.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-card">
+                        <h4>💊</h4>
+                        <h5>24/7 Pharmacy</h5>
+                        <p>Fully stocked pharmacy accessible day and night with certified prescription fulfillment.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="service-card">
+                        <h4>🩺</h4>
+                        <h5>Health Checkup</h5>
+                        <p>Complete preventive health checkups.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+   
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-heart-pulse-fill text-danger me-2"></i>City General Hospital</h5>
+                    <p class="text-muted-white small">Dedicated to providing compassionate, high-quality medical services to our community and helping every patient live a healthier life.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled text-muted-white small">
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#doctors" class="text-decoration-none">Find Doctors</a></li>
+                        <li class="mb-2"><a href="#departments" class="text-decoration-none">Departments</a></li>
+                        <li class="mb-2"><a href="#services" class="text-decoration-none">Our Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Emergency Contact</h5>
+                    <p class="text-muted-white small mb-1"><i class="bi bi-telephone-fill me-2 text-danger"></i> Helpline: 911</p>
+                    <p class="text-muted-white small mb-1"><i class="bi bi-envelope-fill me-2"></i> info@citygeneralhospital.com</p>
+                    <p class="text-muted-white small"><i class="bi bi-geo-alt-fill me-2"></i> 123 Healthcare Ave, Medical District</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-muted-white small pt-2">
+                &copy; 2026 City General Hospital. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

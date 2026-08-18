@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canvas Sketchpad</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #333;
+    color: white;
+    flex-wrap: wrap;
+}
+
+canvas {
+    display: block;
+    background: white;
+    cursor: crosshair;
+}
+
+button {
+    padding: 6px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button.active {
+    background: dodgerblue;
+    color: white;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="toolbar">
+
+<label>
+Color
+<input type="color" id="color" value="#000000">
+</label>
+
+<label>
+Width
+<input type="range" id="width" min="1" max="40" value="5">
+<span id="size">5</span>
+</label>
+
+<button id="drawBtn" class="active">Draw</button>
+<button id="eraseBtn">Eraser</button>
+<button id="clearBtn">Clear</button>
+
+</div>
+
+<canvas id="canvas"></canvas>
+
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight - document.querySelector(".toolbar").offsetHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+let drawing = false;
+let erasing = false;
+
+const colorPicker = document.getElementById("color");
+const widthSlider = document.getElementById("width");
+const sizeLabel = document.getElementById("size");
+
+sizeLabel.textContent = widthSlider.value;
+
+widthSlider.oninput = () => {
+    sizeLabel.textContent = widthSlider.value;
+};
+
+function start(e) {
+    drawing = true;
+    draw(e);
+}
+
+function stop() {
+    drawing = false;
+    ctx.beginPath();
+}
+
+function draw(e) {
+    if (!drawing) return;
+
+    const rect = canvas.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    ctx.lineWidth = widthSlider.value;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+
+    if (erasing) {
+        ctx.globalCompositeOperation = "destination-out";
+    } else {
+        ctx.globalCompositeOperation = "source-over";
+        ctx.strokeStyle = colorPicker.value;
+    }
+
+    ctx.lineTo(x, y);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+}
+
+canvas.addEventListener("mousedown", start);
+canvas.addEventListener("mousemove", draw);
+canvas.addEventListener("mouseup", stop);
+canvas.addEventListener("mouseleave", stop);
+
+canvas.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    start(e.touches[0]);
+});
+
+canvas.addEventListener("touchmove", (e) => {
+    e.preventDefault();
+    draw(e.touches[0]);
+});
+
+canvas.addEventListener("touchend", stop);
+
+const drawBtn = document.getElementById("drawBtn");
+const eraseBtn = document.getElementById("eraseBtn");
+
+drawBtn.onclick = () => {
+    erasing = false;
+    drawBtn.classList.add("active");
+    eraseBtn.classList.remove("active");
+};
+
+eraseBtn.onclick = () => {
+    erasing = true;
+    eraseBtn.classList.add("active");
+    drawBtn.classList.remove("active");
+};
+
+document.getElementById("clearBtn").onclick = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+};
+</script>
+
+</body>
+</html>

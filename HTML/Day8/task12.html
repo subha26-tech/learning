@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Location-Aware Weather Widget</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f8ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .weather-card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        text-align: center;
+        width: 250px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .temp {
+        font-size: 36px;
+        color: #0077cc;
+    }
+</style>
+</head>
+<body>
+
+<div class="weather-card">
+    <h2 id="city">Detecting location...</h2>
+    <div class="temp" id="temperature">--°C</div>
+</div>
+
+<script>
+// Mock weather data
+const mockWeather = {
+    "New York": 22,
+    "London": 16,
+    "Tokyo": 28,
+    "Delhi": 35,
+    "Chennai": 32,
+    "Unknown": 25
+};
+
+function showWeather(city) {
+    document.getElementById("city").textContent = city;
+    document.getElementById("temperature").textContent =
+        (mockWeather[city] || mockWeather["Unknown"]) + "°C";
+}
+
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+} else {
+    showWeather("Unknown");
+}
+
+function success(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+
+    // Mock city detection based on coordinates
+    let city = "Unknown";
+
+    if (lat > 12 && lat < 14 && lon > 79 && lon < 81) {
+        city = "Chennai";
+    } else if (lat > 28 && lat < 29 && lon > 76 && lon < 78) {
+        city = "Delhi";
+    } else if (lat > 35 && lat < 36 && lon > 139 && lon < 140) {
+        city = "Tokyo";
+    } else if (lat > 40 && lat < 41 && lon > -75 && lon < -73) {
+        city = "New York";
+    } else if (lat > 51 && lat < 52 && lon > -1 && lon < 1) {
+        city = "London";
+    }
+
+    showWeather(city);
+}
+
+function error() {
+    showWeather("Unknown");
+}
+</script>
+
+</body>
+</html>

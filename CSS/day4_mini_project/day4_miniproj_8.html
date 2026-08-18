@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#fff;
+            padding:70px;
+        }
+        .faq-container{
+            margin:auto;
+            border-radius:8px;
+            padding:20px;
+        }
+        h2,#faq-cont-p{
+            text-align:center;
+            margin-bottom: 20px;
+        }
+        .faq-item{
+            border-bottom:1px solid #ddd;
+        }
+        .faq-item input{
+            display: none;
+        }
+        .faq-header{
+            display: block;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bolder;
+            color: #444444;
+            position: relative;
+            cursor: pointer;
+        }
+        .faq-body{
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.5s ease;
+            /* padding: 0.5rem 1rem; */
+        }
+        .faq-body p{
+            padding: 0 1rem 1.5rem;
+            line-height:1.6;
+            color:#555;
+        }
+        .faq-header::after{
+            content: "+";
+            position: absolute;
+            right: 30px;
+            font-size: 20px;
+        }
+        .faq-item input:checked + .faq-header::after{
+            content: "\2013";
+        }
+        .faq-item input:checked + .faq-header + .faq-body{
+            max-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <h2>FAQs</h2>
+        <p id="faq-cont-p">These answers might help</p>
+        <div class="faq">
+            <div class="faq-item">
+                <input type="checkbox" id="faq1">
+                <label class="faq-header" for="faq1">
+                    How do I use McAfee Total Protection?
+                </label>
+                <div class="faq-body">
+                    <p>When you open McAfee Total Protection for the first time after installing, 
+                        you'll be greeted by a guided tour that will help you run scans and discover capabilities.
+                    </p>         
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq2">
+                <label class="faq-header" for="faq2">
+                    Does McAfee Total Protection remove viruses?
+                </label>
+                <div class="faq-body">
+                    <p>Once McAfee Total Protection is installed, you'll be able to scan for viruses and quarantine/remove them.</p>         
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq3">
+                <label class="faq-header" for="faq3">
+                      How many devices can I use with McAfee Total Protection?  
+                </label>
+                <div class="faq-body">
+                    <p>McAfee Total Protection is available in three packages: for the individual, 
+                        which covers one device; the multi-device package, which covers five devices; 
+                        and the household package, which covers ten devices. 
+                        McAfee software is compatible with Windows, Mac OS, iOS, and Android devices.
+                    </p>         
+                </div>
+            </div>
+            <div class="faq-item">
+                <input type="checkbox" id="faq4">
+                <label class="faq-header" for="faq4">
+                    What devices and operating systems are compatible with McAfee Total Protection?
+                </label>
+                <div class="faq-body">
+                    <p>McAfee Total Protection is compatible with laptops, desktops, tablets and mobile devices. 
+                        You can find operating system compatibility on our System Requirements page.
+                    </p>         
+                </div>
+            </div>
+        </div>
+    </div>
+</body>  
+</html>

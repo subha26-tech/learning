@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Testimonial Section</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            width: 90%;
+            margin: 40px auto;
+            text-align: center;
+        }
+        section h2 {
+            margin-bottom: 30px;
+            color: #333333;
+        }
+        .testimonials {
+            display: flex;
+            gap: 20px;
+        }
+        article {
+            background: rgba(0, 123, 255, 0.15);
+            box-shadow: 10px 10px 10px rgb(13, 131, 205);
+            padding: 20px;
+            border-radius: 20px;
+            width: 30%;
+            min-width: 250px;
+            margin: 0;
+            transition: background 0.3s ease;
+        }
+        article:hover {
+            background: rgba(8, 207, 238, 0.3);
+            box-shadow: 10px 10px 10px rgb(2, 156, 180);
+        }
+        blockquote {
+            font-style: italic;
+            color: #444444;
+            margin: 0 0 15px;
+        }
+        h4 {
+            font-family: 'Playfair Display', sans-serif;
+            color: #222222;
+        }
+        footer {
+            text-align: center;
+            background: #222222;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .testimonials {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>What Our User Say</h2>
+        <div class="testimonials">
+            <article>
+                <blockquote>
+                    "Free online resource which provides a wide range of tutorials. A great website... for beginners."
+                </blockquote>
+                <h4>— Review by sri vani (2026).</h4>
+            </article>
+            <article>
+                <blockquote>
+                    "Amazing structure and tutorials... I can work on my personal projects while using W3Schools as a reference."
+                </blockquote>
+                <h4>— Review by Brandon (2025).</h4>
+            </article>
+            <article>
+                <blockquote>
+                    "W3Schools has completely changed the way I learn... the 'Try it Yourself' feature lets me practice instantly." 
+                </blockquote>
+                <h4>— Review by Shahidul Islam (2025).</h4>
+            </article>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Testimonials Section. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

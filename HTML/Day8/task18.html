@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Kanban Board</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f4f4f4;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .board {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .column {
+        width: 300px;
+        background: #fff;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .column h2 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .task-list {
+        min-height: 300px;
+        padding: 10px;
+        background: #f8f8f8;
+        border: 2px dashed #ccc;
+        border-radius: 5px;
+    }
+
+    .task {
+        background: #4CAF50;
+        color: white;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        cursor: move;
+    }
+
+    .drag-over {
+        background: #d8ecff;
+        border-color: #2196F3;
+    }
+</style>
+</head>
+<body>
+
+<h1>Mini Kanban Board</h1>
+
+<div class="board">
+
+    <div class="column">
+        <h2>To Do</h2>
+        <div class="task-list" id="todo">
+            <div class="task" draggable="true" id="task1">Design Homepage</div>
+            <div class="task" draggable="true" id="task2">Write Documentation</div>
+        </div>
+    </div>
+
+    <div class="column">
+        <h2>In Progress</h2>
+        <div class="task-list" id="progress">
+            <div class="task" draggable="true" id="task3">Build Login Page</div>
+        </div>
+    </div>
+
+    <div class="column">
+        <h2>Done</h2>
+        <div class="task-list" id="done">
+            <div class="task" draggable="true" id="task4">Project Setup</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+let draggedTask = null;
+
+// Select all tasks
+document.querySelectorAll(".task").forEach(task => {
+
+    task.addEventListener("dragstart", function () {
+        draggedTask = this;
+        setTimeout(() => this.style.display = "none", 0);
+    });
+
+    task.addEventListener("dragend", function () {
+        this.style.display = "block";
+        draggedTask = null;
+    });
+
+});
+
+// Select all task lists (drop zones)
+document.querySelectorAll(".task-list").forEach(list => {
+
+    list.addEventListener("dragover", function (e) {
+        e.preventDefault();
+        this.classList.add("drag-over");
+    });
+
+    list.addEventListener("dragleave", function () {
+        this.classList.remove("drag-over");
+    });
+
+    list.addEventListener("drop", function (e) {
+        e.preventDefault();
+        this.classList.remove("drag-over");
+
+        if (draggedTask) {
+            this.appendChild(draggedTask);
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>

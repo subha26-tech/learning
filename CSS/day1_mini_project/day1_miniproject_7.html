@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            background:linear-gradient(135deg,#74ebd5,#ACB6E5);
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:30px;
+        }
+        .container{
+            width:100%;
+            max-width:1100px;
+            text-align:center;
+        }
+        .container h1{
+            color:#fff;
+            margin-bottom:40px;
+            font-size:40px;
+        }
+        .pricing-flex{
+            display:flex;
+            gap:25px;
+        }
+        .card{
+            flex:1;
+            background:#fff;
+            border-radius:20px;
+            padding:35px 25px;
+            position:relative;
+            overflow:hidden;
+            transition:0.4s;
+        }
+        .card h2{
+            margin:20px 0;
+            color:#333;
+            font-size: 30px;
+        }
+        .card h3{
+            text-align:center;
+            margin-top:0px;
+            margin-bottom:8px
+        }
+        .card:hover{
+            transform:translateY(-12px);
+            box-shadow:0 18px 35px rgba(0,0,0,.25);
+        }
+        .para{
+            margin-top: 8px;
+        }
+        .para1{
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .para2{
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+        .team{
+            border-top:8px solid #00b894;
+        }
+        .enterprise{
+            border-top:8px solid #ff7675;
+            transform:scale(1.05);
+        }
+        .enterprise:hover{
+            transform:scale(1.1);
+        }
+        .ai-fluency{
+            border-top:8px solid #6c5ce7;
+        }
+        .list{
+            color: #000000; 
+            font-size: 15px; 
+            list-style: none;
+            text-align: left;
+        }        
+        .list-item{
+            margin:12px 15px;
+        }
+        .btn{
+            display:inline-block;
+            padding:12px 28px;
+            background:#333;
+            color:#fff;
+            text-decoration:none;
+            border-radius:30px;
+            transition:.3s;
+        }
+        .team .btn{
+            background:#00b894;
+        }
+        .enterprise .btn{
+            background:#ff7675;
+        }
+        .ai-fluency .btn{
+            background:#6c5ce7;
+        }
+        .btn:hover{
+            opacity:.85;
+        }
+        .circle-check{
+            color: #5022c3; 
+            width: 14px; 
+            font-size: 14px;
+        }
+
+        /* Mobile Responsive */
+        @media(max-width:900px){
+            .pricing-flex{
+                flex-direction: column;
+            }
+            .enterprise{
+                transform:scale(1);
+            }
+            .enterprise:hover{
+                transform:translateY(-12px);
+            }
+            .container h1{
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Scalable learning plans for organizations of every size</h1>
+
+    <div class="pricing-flex">
+
+        <div class="card team">
+            <h2>Team Plan</h2>
+            <p class="para1">For your team</p>
+            <p class="para2"><i class="fa-solid fa-user-group" style="margin-right: 8px;"></i>2-50 people</p>
+
+            <h3>₹24,000.00 per license per year</h3>
+            <p class="para1">Billed annually.</p>
+            <a href="#" class="btn">Start your trial ➜</a>
+            <p class="para para1"><a href="#">or buy now</a></p>
+            <ul class="list">
+                <li class="list-item">
+                    <span><i class="fa-sharp fa-solid fa-circle-check circle-check"></i> Access to 14,000+ top courses</span>
+                </li>
+                <li class="list-item">
+                    <span><i class="fa-sharp fa-solid fa-circle-check circle-check"></i> Practice tests, AI-powered coding exercises, and AI Role Plays</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Business -->
+        <div class="card enterprise">
+            <h2>Enterprise Plan</h2>
+            <p class="para1">For your whole organization</p>
+            <p class="para2"><i class="fa-solid fa-user-group" style="margin-right: 8px;"></i>More than 20 people</p>
+
+            <h3>Contact sales for pricing</h3>
+            <a href="#" class="btn">Request a demo ➜</a>
+            <ul class="list">
+                <li class="list-item">
+                    <span><i class="fa-sharp fa-solid fa-circle-check circle-check"></i> Access to 14,000+ top courses</span>
+                </li>
+                <li class="list-item">
+                    <span><i class="fa-sharp fa-solid fa-circle-check circle-check"></i> Practice tests, AI-powered coding exercises, and AI Role Plays</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Premium -->
+        <div class="card ai-fluency">
+            <h2>AI Fluency</h2>
+            <p class="para1">From AI foundations to Enterprise transformation</p>
+            <p class="para2"><i class="fa-solid fa-user-group" style="margin-right: 8px;"></i>More than 20 people</p>
+
+            <h3 style="text-align:center;margin-top:0px;margin-bottom:8px">Contact sales for pricing</h3>
+            <a href="#" class="btn">Contact us ➜</a>
+            <ul class="list">
+                <li class="list-item">
+                    <span>AI Readiness Collection</span>
+                </li>
+                <li class="list-item">
+                    <div style="display:flex; align-items:center; gap:15px; width: 120px; margin-left: 12px;">
+                        <div style="flex:1; height:0.5px; background:rgb(110, 109, 109);"></div>
+                        <span>or</span>
+                        <div style="flex:1; height:0.5px; background:rgb(110, 109, 109);"></div>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <span >AI Growth Collection</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

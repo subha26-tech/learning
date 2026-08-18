@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Improvements</title>
+</head>
+<body>
+    <h1>Before (non-semantic, div soup)</h1>
+    <div id="header">
+    <div class="logo">MySite</div>
+    <div class="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    </div>
+    <div id="main">
+    <div class="article">
+        <div class="title">Welcome to My Blog</div>
+        <div class="content">...</div>
+    </div>
+    </div>
+    <div id="sidebar">
+        <h3>Related Posts</h3>
+        <ul>
+            <li><a href="/post1">Post One</a></li>
+            <li><a href="/post2">Post Two</a></li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>&copy; 2026 MySite. All rights reserved.</p>
+    </div>
+    <hr> 
+
+    <h1>After (semantic structure)</h1>
+    <header>
+    <h1>MySite</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+    <article>
+        <header>
+        <h2>Welcome to My Blog</h2>
+        </header>
+        <p>Here's where the main content goes...</p>
+    </article>
+
+    <aside>
+        <h3>Related Posts</h3>
+        <ul>
+            <li><a href="/post1">Post One</a></li>
+            <li><a href="/post2">Post Two</a></li>
+        </ul>
+    </aside>
+    </main>
+
+    <footer>
+    <p>&copy; 2026 MySite. All rights reserved.</p>
+    </footer>
+    <hr>
+</body>
+
+<h2>SEO Improvements</h2>
+<ol>
+      <li>
+        <strong>Clear hierarchy</strong><br>
+        <code>&lt;header&gt;, &lt;main&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;</code> define the page’s structure, making it easier for crawlers to interpret.
+      </li>
+      <li>
+        <strong>Keyword emphasis</strong><br>
+        Proper use of <code>&lt;h1&gt;</code> for site name and <code>&lt;h2&gt;</code> for article titles ensures search engines prioritize the right keywords.
+      </li>
+      <li>
+        <strong>Improved crawlability</strong><br>
+        <code>&lt;nav&gt;</code> signals navigation menus, helping bots discover internal links more efficiently.
+      </li>
+      <li>
+        <strong>Content relevance</strong><br>
+        <code>&lt;article&gt;</code> highlights standalone content pieces, which can be indexed as unique entries.
+      </li>
+      <li>
+        <strong>User engagement</strong><br>
+        <code>&lt;aside&gt;</code> provides related posts, increasing internal linking and reducing bounce rates.
+      </li>
+      <li>
+        <strong>Accessibility boost</strong><br>
+        Semantic tags improve screen reader navigation, aligning with Google's accessibility ranking signals.
+      </li>
+</ol>
+</html>

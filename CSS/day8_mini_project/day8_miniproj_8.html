@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup Banner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .newsletter-section {
+            padding: 60px 20px;
+        }
+        .newsletter-banner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 35px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            background: linear-gradient(135deg, #ef5502, #7c3aed);
+            color: white;
+            border-radius: 12px;
+        }
+        .newsletter-text {
+            flex: 1;
+        }
+        .newsletter-text h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .newsletter-text p {
+            font-size: 16px;
+            color: #e0e7ff;
+            line-height: 1.5;
+        }
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+        }
+        .newsletter-form button {
+            padding: 14px 22px;
+            border: none;
+            border-radius: 6px;
+            background-color: #ffffff;
+            color: #4f46e5;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .newsletter-form button:hover {
+            background-color: #e0e7ff;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="newsletter-section">
+        <div class="newsletter-banner">
+            <div class="newsletter-text">
+                <h2>Join Our Newsletter</h2>
+                <p>
+                    Get the latest updates, news, and exclusive offers delivered
+                    straight to your inbox.
+                </p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" aria-label="Email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

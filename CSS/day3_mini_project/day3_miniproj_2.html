@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Blog Layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            width: 100vw;
+            height: 15vh;
+            background:linear-gradient(135deg,#667eea,#764ba2);
+            margin-bottom: 30px;
+        }
+        article{
+            flex: 1;
+            margin-bottom: 20px;
+        }
+        footer{
+            width: 100vw;
+            height: 5vh;
+            background:linear-gradient(135deg,#667eea,#764ba2);
+        }
+        h1{
+            font-size: 2.5rem;
+        }
+        h2{
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        h3{
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 1em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Tech Blog</h1>
+    </header>
+    <article>
+        <h2>How Technology is Changing the World</h2>
+        <h3>By John Doe - Feb 2025</h3>
+        <p>Technology is evolving rapidly with innovations in artificial intelligence, cloud computing, cybersecurity, and automation. Businesses continue adopting digital solutions to improve productivity and customer experiences.</p>
+    </article>
+    <footer>
+        <p>&copy; 2025 My Tech Blog. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

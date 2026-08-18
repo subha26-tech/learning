@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Features</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                background-color: #f4f7fb;
+                padding: 40px;
+            }
+
+            .container {
+                text-align: center;
+            }
+
+            h1 {
+                color: #333;
+                margin-bottom: 30px;
+            }
+
+            .features {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+                max-width: 1000px;
+                margin: auto;
+            }
+
+            .feature-box {
+                background-color: white;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                transition: transform 0.3s, background-color 0.3s;
+            }
+
+            .feature-box:hover {
+                transform: translateY(-10px);
+                background-color: #dff6ff;
+            }
+
+            .icon {
+                /* width: 10px;
+                height: 20px; */
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .feature-box h2 {
+                color: #0077cc;
+                margin-bottom: 10px;
+            }
+
+            .feature-box p {
+                color: #555;
+                line-height: 1.5;
+            }
+
+            @media(max-width: 768px) {
+                .features {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Product Features</h1>
+        <div class="features">
+            <div class="feature-box">
+                <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/9471/9471101.png" width="70" height="70"></div>
+                <h2>Protect your kids online</h2>
+                <p>K7 Total Security's Parental Control features let you filter harmful websites, block malicious and dangerous websites and secure their devices.
+                    <br>Control their time spent online and block specific websites or applications from use.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <div class="icon"><img src="https://static.vecteezy.com/system/resources/previews/029/899/733/non_2x/secure-payment-credit-card-icon-with-shield-secure-transaction-stock-illustration-vector.jpg" width="100" height="70"></div>
+                <h2>Secure online transactions</h2>
+                <p>All your financial details: bank account and credit card numbers, your passwords are 100% secured Stay safe even while using a public Wi-fi connection.</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="icon"><img src="https://cdn-icons-png.flaticon.com/512/17906/17906585.png" width="70" height="70"></div>
+                <h2>Web & Internet Protection</h2>
+                <p>K7 Total Security provides robust protection against hackers with the virtual keyboard feature, preventing keyloggers and phising attempts.</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="icon"><img src="https://png.pngtree.com/png-vector/20260108/ourmid/pngtree-ai-security-shield-icon-png-image_18445442.webp" width="100" height="100"></div>
+                <h2>Powered By MAT</h2>
+                <p>Advanced Multi-layered Artificial intelligence Technology secures computing activity across multiple digital layers and utilises the power of AI to provide the highest protection required to keep you safe from any cyberattack.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

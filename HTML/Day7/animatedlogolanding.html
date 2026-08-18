@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Logo Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+    }
+    .container {
+      text-align: center;
+      color: white;
+    }
+    svg {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      background-color: #fff;
+      color: #333;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Animated SVG Logo -->
+    <svg viewBox="0 0 200 200">
+      <!-- Circle -->
+      <circle cx="100" cy="100" r="70" fill="orange">
+        <animate attributeName="r" values="70;40;70" dur="3s" repeatCount="indefinite" />
+      </circle>
+      
+      <!-- Rectangle -->
+      <rect x="70" y="70" width="60" height="50" fill="blue" opacity="0.6">
+        <animate attributeName="x" values="70;80;70" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="y" values="70;80;70" dur="2s" repeatCount="indefinite" />
+      </rect>
+      
+      <!-- Text -->
+      <text x="100" y="190" font-size="30" text-anchor="middle" fill="white">
+        MyLogo
+        <animate attributeName="fill" values="white;yellow;blue;brown;white;" dur="2s" repeatCount="indefinite" />
+      </text>
+    </svg>
+
+    <!-- Landing Page Content -->
+    <h1>Welcome to Our Site</h1>
+    <p>We create beautiful, animated experiences for the web.</p>
+    <button>Get Started</button>
+  </div>
+</body>
+</html>

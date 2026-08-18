@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 20px;
+        }
+        .image-box {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .image-box img {
+            width: 100%;
+            height: 30vh;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+        .image-box:hover img {
+            filter: brightness(70%);
+        } 
+        .caption {
+            padding: 10px;
+            font-size: 1.2rem; 
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .caption {
+                font-size: 1em; 
+            }
+        }     
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Image Gallery</h1>
+
+    <div class="gallery">
+        <div class="image-box">
+            <img src="https://picsum.photos/id/1015/600/400" alt="Nature 1">
+            <div class="caption">Beautiful Nature</div>
+        </div>
+        <div class="image-box">
+            <img src="https://picsum.photos/id/1025/600/400" alt="Nature 2">
+            <div class="caption">Cute Dog</div>
+        </div>
+        <div class="image-box">
+            <img src="https://picsum.photos/id/1035/600/400" alt="Nature 3">
+            <div class="caption">Mountain View</div>
+        </div>
+        <div class="image-box">
+            <img src="https://picsum.photos/id/1043/600/400" alt="Nature 4">
+            <div class="caption">Peaceful Lake</div>
+        </div>
+        <div class="image-box">
+            <img src="https://picsum.photos/id/1050/600/400" alt="Nature 5">
+            <div class="caption">Green Forest</div>
+        </div>
+        <div class="image-box">
+            <img src="https://picsum.photos/id/182/2896/1944" alt="Nature 6">
+            <div class="caption">Windmill</div>
+        </div>
+    </div>
+
+</body>
+</html>

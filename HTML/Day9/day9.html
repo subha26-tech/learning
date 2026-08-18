@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="mp1">
+        <h1>Mini Project 1</h1>
+        <h2><a href="miniproject1.html">Fitness Blog</a></h2>
+        <hr>
+    </section>
+    <section id="mp_3">
+        <h1>Mini Project 3</h1>
+        <form>
+            <h2>Daily To-Do List</h2>
+            <ul style="list-style-type: none;">
+                <li>
+                    <input type="checkbox"> Wake up early
+                </li>
+
+                <li>
+                    <input type="checkbox"> Exercise for 30 minutes
+                </li>
+
+                <li>
+                    <input type="checkbox"> Complete assignments
+                </li>
+
+                <li>
+                    <input type="checkbox"> Learn a new topic
+                </li>
+
+                <li>
+                    <input type="checkbox"> Review today's work
+                </li>
+            </ul>
+            <button type="reset">Clear All</button>
+        </form>
+        <hr>
+    </section>
+    <section id="mp_4">
+        <h1>Mini Project 4</h1>
+        <h2>Canvas Drawing Board</h2>
+        <button style="background-color: red;color: white;">Red</button>
+        <button style="background-color: blue;color: white">Blue</button>
+        <button style="background-color: green;color: white">Green</button>
+        <button style="background-color: black;color: white">Black</button>
+        <br><br>
+        <button>Draw Rectangle</button>
+        <button>Draw Circle</button>
+        <button>Clear</button>
+        <br><br>
+        <canvas id="myCanvas" width="600" height="400" style="border:1px solid black;"></canvas>
+        <hr>
+    </section>
+    <section id="mp_6">
+        <h1>Mini Project 6</h1>
+        <h2>Accessible Survey Form</h2>
+        <form>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" aria-label="Enter your full name" required pattern="[A-Za-z ]{2,60}" 
+                title="Name should contain only letters and spaces (2-50 characters).">
+                <br><br>
+            <label for="age">Age:   </label>
+            <input type="number" id="age" name="age" aria-label="Enter your age" required min="1" max="120">
+            <br><br>
+            <label for="color">Favorite Color:  </label>
+            <input type="color" id="color" name="color" aria-label="Choose your favorite color" required>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form><hr>
+    </section>
+    <section id="mp_7">
+        <h1>Mini Project 7</h1>
+        <h2>SVG Icon Gallery</h2>
+        <table border="1" cellpadding="20">
+            <tr>
+            <td align="center">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="red">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                    2 5.42 4.42 3 7.5 3
+                    c1.74 0 3.41.81 4.5 2.09
+                    C13.09 3.81 14.76 3 16.5 3
+                    19.58 3 22 5.42 22 8.5
+                    c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <br>Heart
+            </td>
+
+            <td align="center">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="gold">
+                    <path d="M12 2l2.9 6.63 7.1.61-5.38 4.66
+                    1.61 6.99L12 17.77
+                    5.77 20.89l1.61-6.99
+                    L2 9.24l7.1-.61L12 2z"/>
+                </svg>
+                <br>Star
+            </td>
+
+            <td align="center">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="gray">
+                    <path d="M3 6h18v2H3V6zm2 2h14l-1 13H6L5 8zm5-5h4l1 2H9l1-2z"/>
+                </svg>
+                <br>Trash
+            </td>
+            </tr>
+        </table>
+    </section>
+    
+</body>
+</html>

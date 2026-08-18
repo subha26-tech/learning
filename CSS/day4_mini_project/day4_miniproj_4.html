@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background:linear-gradient(to right,rgb(183, 75, 183),#1367f8);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: white;
+        }
+        header{
+            height: 15vh;
+        }
+        footer{
+            background-color: #3147ac;
+        }      
+        a{
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        main{
+            width: 80vw;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 23px;
+        }
+        main h1{
+            text-transform: uppercase;
+        }
+        .section{
+            background:rgba(255,255,255,0.12);
+            border-radius:12px;
+            flex: 1;
+        }
+        .section p{
+            line-height: 1.6;
+        }
+        p{
+            font-size: 18px;
+        }
+        .skills{
+            text-align:center;
+            font-size:24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>John Doe</h1>
+        <nav>
+            <a href="#">Web Developer</a> |
+            <a href="#">Designer</a> |
+            <a href="#">Innovator</a>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h1>About Me</h1>
+            <p>I specialize in front-end and back-end development, crafting beautiful and functional web experiences. My passion is turning creative ideas into reality.</p>
+        </section>
+        <section class="section">
+            <h1>Skills</h1>
+            <div class="skills">
+                HTML, CSS, Javascript<br>
+                React, Node.js, Django<br>
+                UI/UX design
+            </div>
+        </section>
+        <section class="section">
+            <h1>Contact</h1>
+            <p>Email : john@example.com</p> 
+            <p>Linked In : linkedin.com/in/johndoe</p> 
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 John Doe. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

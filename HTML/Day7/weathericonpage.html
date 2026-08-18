@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Icon SVG</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e0f7fa;
+    }
+  </style>
+</head>
+<body>
+    <figure>
+        <svg width="150" height="150" style="display:block;">
+        <!-- Sun -->
+        <circle cx="40" cy="40" r="30" fill="gold" />
+        <!-- Cloud -->
+        <ellipse cx="80" cy="60" rx="30" ry="20" fill="lightgray"/>
+        <ellipse cx="120" cy="60" rx="30" ry="20" fill="lightgray"/>
+        <ellipse cx="105" cy="45" rx="30" ry="20" fill="lightgray"/>
+
+        <!-- Raindrop -->
+        <path d="M100 90 C95 100, 105 100, 100 110 
+                C95 100, 105 100, 100 90 Z" fill="deepskyblue"/>
+        <path d="M115 95 C110 105, 120 105, 115 115 
+                C110 105, 120 105, 115 95 Z" fill="deepskyblue"/>
+        <path d="M85 95 C80 105, 90 105, 85 115 
+                C80 105, 90 105, 85 95 Z" fill="deepskyblue"/>
+        </svg>
+        <figcaption>
+            <h3>Why SVG is better than PNG here</h3><br>
+            <ul>
+                <li><strong>Scalability</strong>: SVG is vector-based, so the icon can be resized infinitely without losing quality. PNGs are raster images and become pixelated when scaled up.</li>
+                
+                <li><strong>File size</strong>: SVGs are usually smaller for simple graphics like icons, while PNGs can be heavier.</li>
+                
+                <li><strong>Editability</strong>: You can directly edit shapes, colors, and strokes in SVG with code. PNG requires graphic software to modify.</li>
+                
+                <li><strong>Performance</strong>: SVGs load faster and are ideal for web use, especially for icons and logos.</li>
+                
+                <li><strong>Accessibility</strong>: SVGs can include metadata, titles, and descriptions, making them more accessible for screen readers.</li>
+            </ul>
+        </figcaption>
+    </figure>
+</body>
+</html>

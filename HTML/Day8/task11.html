@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation API Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #location {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Display Current Coordinates</h2>
+    <button onclick="getLocation()">Get My Location</button>
+
+    <div id="location"></div>
+
+    <script>
+        function getLocation() {
+            const output = document.getElementById("location");
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        output.innerHTML =
+                            "<strong>Latitude:</strong> " + position.coords.latitude +
+                            "<br><strong>Longitude:</strong> " + position.coords.longitude;
+                    },
+                    function(error) {
+                        switch(error.code) {
+                            case error.PERMISSION_DENIED:
+                                output.innerHTML = "User denied the request for Geolocation.";
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                output.innerHTML = "Location information is unavailable.";
+                                break;
+                            case error.TIMEOUT:
+                                output.innerHTML = "The request to get location timed out.";
+                                break;
+                            default:
+                                output.innerHTML = "An unknown error occurred.";
+                        }
+                    }
+                );
+            } else {
+                output.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+    </script>
+
+</body>
+</html>

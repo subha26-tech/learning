@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Grid Layout</title>
+
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            /* text-align: center; */
+        }
+        .service-section {
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        .service-section h1{
+            color: white;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .service-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* justify-content: center; */
+            gap: 25px;
+        }
+        article {   
+            background-color: white;
+            padding: 10px 20px;
+            color: #555555;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+            transition: 0.3s ease;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        article:hover {
+            transform: scale(1.05);
+        }
+        article img{
+            position: relative;
+            left:75%;
+        }
+    </style>
+</head>
+<body>
+    <section class="service-section">
+        <h1>Our Services</h1>
+        <div class="service-grid">
+            <article>
+                <h2>Rides</h2>
+                <p>Request in seconds, ride in minutes.</p>
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/man-confidently-navigates-electric-car-illustration-svg-download-png-11075695.png"
+                    width="100" height="70">
+            </article>
+            <article>
+                <h2>Delivery</h2>
+                <p>Your favourite food, delivered fast.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0OHIntKr0tCw8thbNdHaoqjpcb9l17dNPTmJAyxSOUA&s=10"
+                    width="100" height="70">
+            </article>
+            <article>
+                <h2>Groceries</h2>
+                <p>All the essentials whenever you need them.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsMnXAUOHV3A8zktCL1PjigyLDijkaVIE-MrR2kRzJyg&s=10"
+                    width="100" height="70">
+            </article>
+            <article>
+                <h2>Car-sharing</h2>
+                <p>High-quality car rental made easy.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXA9HA5zcEX97eOhrJPFN5TQfowx-ZDNDoFANBt8yMpg&s=10"
+                    width="100" height="70">
+            </article>
+            <article>
+                <h2>Micromobility</h2>
+                <p>2-wheel ride rental at your fingertips.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqLrusIRXz9y4RBuNAlZhoJkFvOjWK47yhaMZau4fR8A&s=10"
+                    width="100" height="70">
+            </article>
+            <article>
+                <h2>Business</h2>
+                <p>Manage business travel for your team and clients.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBfJshR9R1ZYfwXYNt2K6vgh_zRoEbdb71t3VUAtmgaA&s=10"
+                    width="100" height="70">
+            </article>
+        </div>
+    </section>
+</body>
+</html>

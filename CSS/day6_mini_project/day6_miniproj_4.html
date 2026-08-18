@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header{
+            background: linear-gradient(80deg,rgb(7, 191, 7),lightgreen);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer{
+            background-color: #3f3e3e;
+            text-shadow: 2px 2px 4px gray;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        img{
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+        }
+        section{
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .services{
+            display: flex;
+            padding: 20px;
+        }
+        article{
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px grey;
+            background-color: rgb(231, 230, 230);
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+        }
+        article h3{
+            margin: 15px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+    </header>
+    <section>
+            <h2>What We Offer</h2>
+            <div class="services">
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrjl9GGfJ6cvzs1elbmmYLhs_OsNsz9JJ2ywaWZ1OBlA&s=10" alt="Service 1">
+                    <h3>Web Development</h3>
+                    <p>We build modern and responsive websites tailored to your needs.</p>
+                </article>
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGcOYYFLcFh2HnjgBRw5qoApj5PK4yqH0QiWp4XgraPQ&s=10" alt="Service 2">
+                    <h3>Graphic Design</h3>
+                    <p>Our design team creates stunning graphics to bring your vision to life.</p>
+                </article>
+                <article>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjHXTiRHCLmjqGrZgQFnz_-AMmIY3SCORHfcmUuKZm6g&s=10" alt="Service 3">
+                    <h3>SEO Optimization</h3>
+                    <p>Boost your online presence with our expert SEO optimization services.</p>
+                </article>
+            </div>
+    </section>
+    <footer>
+        <p>&copy 2025 Vetri Technology Solutions. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

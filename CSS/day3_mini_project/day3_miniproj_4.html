@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .design-class{
+            color: white;
+            background-color: navy;
+        }
+        header{
+            height: 15vh;
+        }        
+        a{
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        main{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        footer{
+            height: 10vh;
+        }
+        h1,h2{
+            margin-bottom: 23px;
+        }
+        .margin-btm{
+            margin-bottom: 15px;
+        }
+        .about{
+            flex: 1;
+            background-color: lightgrey;
+        }
+        .skills{
+            flex: 1;
+            background: linear-gradient(160deg,white,skyblue,white);
+        }
+        .projects{
+            flex: 2;
+            background-color: rgb(243, 242, 242);
+        }
+        p{
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header class="design-class">
+        <h1>John Doe</h1>
+        <nav>
+            <a href="#">Web Developer</a> |
+            <a href="#">Designer</a> |
+            <a href="#">Freelancer</a>
+        </nav>
+    </header>
+    <main>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I am a passionate web developer specializing in front-end and back-end technologies.</p>
+        </section>
+        <section class="skills">
+            <h2>Skills</h2>
+            <p>HTML, CSS, Javascript</p>
+            <p>React, Node.js, Django</p>
+            <p>UI/UX design</p>
+        </section>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="margin-btm">
+                <h3 class="margin-btm">Protfolio Website</h3>
+                <p>A sleek and modern protfolio to showcase my work.</p>
+            </div>
+            <div class="margin-btm">
+                <h3 class="margin-btm">E-commerce App</h3>
+                <p>An online store with cart functionality and payment integration.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="design-class">
+        <h2>Contact</h2>
+        <p>Email : john@example.com</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Survey</title>
+</head>
+<body>
+     <h2>Customer Feedback Survey</h2>
+    <form>
+        
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required maxlength="50" placeholder="Enter your name"><br><br>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com"
+               pattern="^[a-zA-Z0-9._%$+-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$" 
+               title="Must be a valid email format."><br><br>
+        
+        <p>How would you rate your overall experience?</p>
+        <input type="radio" id="excellent" name="experience" value="Excellent">
+        <label for="excellent">Excellent</label><br>        
+        <input type="radio" id="good" name="experience" value="Good">
+        <label for="good">Good</label><br>        
+        <input type="radio" id="average" name="experience" value="Average">
+        <label for="average">Average</label><br>        
+        <input type="radio" id="poor" name="experience" value="Poor">
+        <label for="poor">Poor</label><br><br>
+        
+        <p>What aspects did you like most?</p>
+        <input type="checkbox" id="quality" name="likes" value="Product Quality">
+        <label for="quality">Product Quality</label><br>        
+        <input type="checkbox" id="service" name="likes" value="Customer Service">
+        <label for="service">Customer Service</label><br>        
+        <input type="checkbox" id="price" name="likes" value="Pricing">
+        <label for="price">Pricing</label><br>        
+        <input type="checkbox" id="delivery" name="likes" value="Delivery Speed">
+        <label for="delivery">Delivery Speed</label><br><br>
+        
+        <label for="suggestions">Suggestions for Improvement:</label><br>
+        <textarea id="suggestions" name="suggestions" rows="4" cols="40"></textarea><br><br>
+        
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>

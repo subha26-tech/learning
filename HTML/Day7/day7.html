@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia & Graphics (Prompts )</title>
+    <style>
+    .album-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 320px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .album-cover {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .album-title {
+      font-size: 1.4em;
+      margin: 8px 0;
+      text-align: center;
+    }
+    .song-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .song-list li {
+      margin-bottom: 12px;
+    }
+    audio {
+      width: 100%;
+    }
+
+    #banner_id{
+        background-color: black;
+    }
+    .banner {
+      width: 100%;
+      height: 200px;
+    }
+    .banner-text {
+      font-family: Arial, sans-serif;
+      font-size: 40px;
+      fill: #fff;
+      animation: moveText 5s infinite alternate;
+    }
+    @keyframes moveText {
+      from { transform: translateX(0); }
+      to { transform: translateX(200px); }
+    }
+  </style>
+</head>
+<body>
+    <h1>Multimedia & Graphics (Prompts )</h1><hr>
+    <h2 id="task_21">Task 21</h2>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+        <iframe width="1021" height="574" src="https://www.youtube.com/embed/Woj1R2OjzoI" 
+        title="Episode 2 - TEAMWORK- The Adventures of BonBon and LoLo" 
+        frameborder="0" allowfullscreen
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+    <hr>
+
+    <h2 id="task_22">Task 22</h2>
+    <article>
+        <h1>How to Bake a Perfect Chocolate Cake</h1>
+        <p>In this tutorial, you'll learn step-by-step how to bake a moist and delicious chocolate cake. Follow along with the video below for clear instructions.</p>
+
+        <figure>
+            <video controls width="600">
+            <source src="https://cdn.jwplayer.com/manifests/uUwEcSnP.m3u8?max_resolution=1280" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            <figcaption>Step-by-step tutorial on baking a perfect chocolate cake.</figcaption>
+        </figure>
+
+        <p>After watching the video, try the recipe yourself and share your results in the comments section!</p>
+    </article>
+
+    <h2 id="task_25">Task 25</h2>
+    <section>
+        <h3>Watch Demo</h3>
+        <iframe width="951" height="535" 
+            src="https://www.youtube.com/embed/BvWHRSTDyNs" 
+            title="Every masterpiece starts with feedback :15" 
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <h2 id="task_26">Task 26</h2>
+    <h3>Monthly Website Visitors</h3>
+    <canvas id="visitorsChart" width="600" height="400" style="border:1px solid #000;"></canvas>
+
+    <h2 id="task_27">Task 27</h2>
+    <h3>My Soundboard</h3>
+    <!-- Audio elements -->
+    <audio id="clip1" src="audio1.mp3"></audio>
+    <audio id="clip2" src="audio2.mp3"></audio>
+    <audio id="clip3" src="audio3.mp3"></audio>
+
+    <!-- Buttons -->
+    <button onclick="playSound('clip1')">Play Clip 1</button>
+    <button onclick="playSound('clip2')">Play Clip 2</button>
+    <button onclick="playSound('clip3')">Play Clip 3</button>
+
+    <script>
+        function playSound(id) {
+            const audio = document.getElementById(id);
+            audio.currentTime = 0; // restart from beginning
+            audio.play();
+        }
+    </script> 
+    <hr>
+    
+    <h2 id="task_28">Task 28</h2><hr>
+    <h3>Album Preview Card</h3>
+    <div class="album-card">
+        <img src="album-cover.jpg" alt="Album Cover" class="album-cover">
+        <h2 class="album-title">Happy</h2>
+        <ul class="song-list">
+            <li>
+                1. Inspiring Optimistic Upbeat Energetic Guitar Rhythm  
+                <audio controls>
+                <source src="audio1.mp3" type="audio/mpeg">
+                </audio>
+            </li>
+            <li>
+                2. Tropical Soul
+                <audio controls>
+                <source src="audio2.mp3" type="audio/mpeg">
+                </audio>
+            </li>
+            <li>
+                3. Summer Madness
+                <audio controls>
+                <source src="audio3.mp3" type="audio/mpeg">
+                </audio>
+            </li>
+        </ul>
+    </div>
+    <h2 id="task_29">Task 29</h2><hr>
+    <h3>Animated SVG Banner</h3>
+    <div id="banner_id">
+        <svg class="banner" viewBox="0 0 800 200">
+            <!-- Pulsing circles -->
+            <circle cx="100" cy="100" r="30" fill="cyan">
+            <animate attributeName="r" values="20;40;20" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="700" cy="100" r="30" fill="magenta">
+            <animate attributeName="r" values="20;40;20" dur="2s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Moving text -->
+            <text x="200" y="110" class="banner-text">Welcome to My Banner</text>
+        </svg> 
+    </div>  
+    
+    <h2 id="task_30">Task 30</h2><hr>
+    <h3>Draw Your Signature</h3>
+    <canvas id="signaturePad" width="500" height="200"></canvas><br>
+    <button id="clearBtn">Clear</button>
+</body>
+</html>
